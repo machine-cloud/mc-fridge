@@ -1,0 +1,80 @@
+{
+  "name": "mc-fridge",
+  "version": "0.0.1",
+  "dependencies": {
+    "async": {
+      "version": "0.2.9",
+      "from": "async@~0.2.9"
+    },
+    "bmp085": {
+      "version": "0.2.0",
+      "from": "bmp085@~0.2.0",
+      "dependencies": {
+        "underscore": {
+          "version": "1.5.2",
+          "from": "underscore@~1.5.2"
+        }
+      }
+    },
+    "coffee-script": {
+      "version": "1.6.3",
+      "from": "coffee-script@~1.6.3"
+    },
+    "i2c": {
+      "version": "0.1.4",
+      "from": "i2c@~0.1.4",
+      "dependencies": {
+        "bindings": {
+          "version": "1.1.1",
+          "from": "bindings@~1.1.0"
+        },
+        "underscore": {
+          "version": "1.2.4",
+          "from": "underscore@1.2.4"
+        },
+        "coffee-script": {
+          "version": "1.3.3",
+          "from": "coffee-script@1.3.3"
+        },
+        "repl": {
+          "version": "0.1.3",
+          "from": "repl@0.1.3"
+        }
+      }
+    },
+    "pi-gpio": {
+      "version": "0.0.2",
+      "from": "pi-gpio@~0.0.2"
+    },
+    "serialport": {
+      "version": "1.2.4",
+      "from": "serialport@~1.2.3",
+      "resolved": "https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz",
+      "dependencies": {
+        "bindings": {
+          "version": "1.1.1",
+          "from": "bindings@1.1.1"
+        },
+        "async": {
+          "version": "0.1.18",
+          "from": "async@0.1.18",
+          "resolved": "https://registry.npmjs.org/async/-/async-0.1.18.tgz"
+        },
+        "sf": {
+          "version": "0.1.6",
+          "from": "sf@0.1.6"
+        },
+        "optimist": {
+          "version": "0.3.7",
+          "from": "optimist@~0.3.4",
+          "dependencies": {
+            "wordwrap": {
+              "version": "0.0.2",
+              "from": "wordwrap@~0.0.2"
+            }
+          }
+        }
+      }
+    }
+  }
+}
