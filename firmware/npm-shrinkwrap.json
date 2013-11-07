@@ -43,24 +43,21 @@
       }
     },
     "logfmt": {
-      "version": "0.15.0",
-      "from": "logfmt@git://github.com/ddollar/node-logfmt#merged",
-      "resolved": "git://github.com/ddollar/node-logfmt#c02dc533edbca2554a3350fb514a447d97e0f9ad",
+      "version": "0.16.0",
+      "from": "logfmt@~0.16.0",
+      "resolved": "https://registry.npmjs.org/logfmt/-/logfmt-0.16.0.tgz",
       "dependencies": {
         "split": {
           "version": "0.2.10",
-          "from": "split@0.2.x",
-          "resolved": "https://registry.npmjs.org/split/-/split-0.2.10.tgz"
+          "from": "split@0.2.x"
         },
         "through": {
           "version": "2.3.4",
-          "from": "through@2.3.x",
-          "resolved": "https://registry.npmjs.org/through/-/through-2.3.4.tgz"
+          "from": "through@2.3.x"
         },
         "readable-stream": {
           "version": "1.0.17",
-          "from": "readable-stream@1.0.x",
-          "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.17.tgz"
+          "from": "readable-stream@1.0.x"
         }
       }
     },
