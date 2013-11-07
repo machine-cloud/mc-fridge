@@ -143,9 +143,9 @@
       "from": "coffee-script@~1.6.3"
     },
     "logfmt": {
-      "version": "0.15.0",
-      "from": "logfmt@git://github.com/ddollar/node-logfmt#merged",
-      "resolved": "git://github.com/ddollar/node-logfmt#c02dc533edbca2554a3350fb514a447d97e0f9ad",
+      "version": "0.16.0",
+      "from": "logfmt@~0.16.0",
+      "resolved": "https://registry.npmjs.org/logfmt/-/logfmt-0.16.0.tgz",
       "dependencies": {
         "split": {
           "version": "0.2.10",

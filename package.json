@@ -8,7 +8,7 @@
     "async":         "~0.2.9",
     "express":       "~3.4.4",
     "coffee-script": "~1.6.3",
-    "logfmt":        "git://github.com/ddollar/node-logfmt#merged",
+    "logfmt":        "~0.16.0",
     "nodemon":       "~0.7.10",
     "node-uuid":     "~1.4.1"
   }
