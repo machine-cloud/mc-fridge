@@ -1,0 +1,15 @@
+{
+  "name":        "mc-fridge-firmware",
+  "version":     "0.0.1",
+  "description": "Machine Cloud Fridge Firmware",
+  "author":      "David Dollar",
+  "license":     "MIT",
+  "dependencies": {
+    "async":         "~0.2.9",
+    "bmp085":        "~0.2.0",
+    "coffee-script": "~1.6.3",
+    "i2c":           "~0.1.4",
+    "pi-gpio":       "~0.0.2",
+    "serialport":    "~1.2.3"
+  }
+}

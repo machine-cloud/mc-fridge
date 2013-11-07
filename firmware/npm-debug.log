@@ -1,0 +1,849 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/david/.nvm/v0.10.3/bin/node',
+1 verbose cli   '/Users/david/.nvm/v0.10.3/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@1.2.17
+3 info using node@v0.10.3
+4 verbose read json /Users/david/Dropbox/David/Code/mc-fridge/firmware/package.json
+5 warn package.json mc-fridge-firmware@0.0.1 No README.md file found!
+6 info shrinkwrap file "/Users/david/Dropbox/David/Code/mc-fridge/firmware/npm-shrinkwrap.json"
+7 verbose readDependencies returned deps { async: '0.2.9',
+7 verbose readDependencies returned deps   bmp085: '0.2.0',
+7 verbose readDependencies returned deps   'coffee-script': '1.6.3',
+7 verbose readDependencies returned deps   i2c: '0.1.4',
+7 verbose readDependencies returned deps   'pi-gpio': '0.0.2',
+7 verbose readDependencies returned deps   serialport: 'https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz' }
+8 verbose install where, deps [ '/Users/david/Dropbox/David/Code/mc-fridge/firmware',
+8 verbose install   [ 'async',
+8 verbose install     'bmp085',
+8 verbose install     'coffee-script',
+8 verbose install     'i2c',
+8 verbose install     'pi-gpio',
+8 verbose install     'serialport' ] ]
+9 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/package.json
+10 info preinstall mc-fridge-firmware@0.0.1
+11 verbose read json /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/async/package.json
+12 verbose read json /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/bmp085/package.json
+13 verbose read json /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/coffee-script/package.json
+14 verbose read json /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/nodemon/package.json
+15 verbose read json /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/pi-gpio/package.json
+16 verbose read json /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/serialport/package.json
+17 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/package.json
+18 info shrinkwrap file "/Users/david/Dropbox/David/Code/mc-fridge/firmware/npm-shrinkwrap.json"
+19 verbose readDependencies returned deps { async: '0.2.9',
+19 verbose readDependencies returned deps   bmp085: '0.2.0',
+19 verbose readDependencies returned deps   'coffee-script': '1.6.3',
+19 verbose readDependencies returned deps   i2c: '0.1.4',
+19 verbose readDependencies returned deps   'pi-gpio': '0.0.2',
+19 verbose readDependencies returned deps   serialport: 'https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz' }
+20 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/async/package.json
+21 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/bmp085/package.json
+22 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/coffee-script/package.json
+23 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/nodemon/package.json
+24 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/pi-gpio/package.json
+25 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/serialport/package.json
+26 verbose already installed skipping async@0.2.9 /Users/david/Dropbox/David/Code/mc-fridge/firmware
+27 verbose already installed skipping bmp085@0.2.0 /Users/david/Dropbox/David/Code/mc-fridge/firmware
+28 verbose already installed skipping coffee-script@1.6.3 /Users/david/Dropbox/David/Code/mc-fridge/firmware
+29 verbose cache add [ 'i2c@0.1.4', null ]
+30 verbose cache add name=undefined spec="i2c@0.1.4" args=["i2c@0.1.4",null]
+31 verbose parsed url { protocol: null,
+31 verbose parsed url   slashes: null,
+31 verbose parsed url   auth: null,
+31 verbose parsed url   host: null,
+31 verbose parsed url   port: null,
+31 verbose parsed url   hostname: null,
+31 verbose parsed url   hash: null,
+31 verbose parsed url   search: null,
+31 verbose parsed url   query: null,
+31 verbose parsed url   pathname: 'i2c@0.1.4',
+31 verbose parsed url   path: 'i2c@0.1.4',
+31 verbose parsed url   href: 'i2c@0.1.4' }
+32 verbose cache add name="i2c" spec="0.1.4" args=["i2c","0.1.4"]
+33 verbose parsed url { protocol: null,
+33 verbose parsed url   slashes: null,
+33 verbose parsed url   auth: null,
+33 verbose parsed url   host: null,
+33 verbose parsed url   port: null,
+33 verbose parsed url   hostname: null,
+33 verbose parsed url   hash: null,
+33 verbose parsed url   search: null,
+33 verbose parsed url   query: null,
+33 verbose parsed url   pathname: '0.1.4',
+33 verbose parsed url   path: '0.1.4',
+33 verbose parsed url   href: '0.1.4' }
+34 verbose addNamed [ 'i2c', '0.1.4' ]
+35 verbose addNamed [ '0.1.4', '0.1.4' ]
+36 verbose already installed skipping pi-gpio@0.0.2 /Users/david/Dropbox/David/Code/mc-fridge/firmware
+37 silly lockFile 15e7b936-i2c-0-1-4 i2c@0.1.4
+38 verbose lock i2c@0.1.4 /Users/david/.npm/15e7b936-i2c-0-1-4.lock
+39 verbose cache add [ 'serialport@https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz',
+39 verbose cache add   null ]
+40 verbose cache add name=undefined spec="serialport@https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz" args=["serialport@https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz",null]
+41 verbose parsed url { protocol: null,
+41 verbose parsed url   slashes: null,
+41 verbose parsed url   auth: null,
+41 verbose parsed url   host: null,
+41 verbose parsed url   port: null,
+41 verbose parsed url   hostname: null,
+41 verbose parsed url   hash: null,
+41 verbose parsed url   search: null,
+41 verbose parsed url   query: null,
+41 verbose parsed url   pathname: 'serialport@https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz',
+41 verbose parsed url   path: 'serialport@https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz',
+41 verbose parsed url   href: 'serialport@https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz' }
+42 verbose cache add name="serialport" spec="https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz" args=["serialport","https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz"]
+43 verbose parsed url { protocol: 'https:',
+43 verbose parsed url   slashes: true,
+43 verbose parsed url   auth: null,
+43 verbose parsed url   host: 'registry.npmjs.org',
+43 verbose parsed url   port: null,
+43 verbose parsed url   hostname: 'registry.npmjs.org',
+43 verbose parsed url   hash: null,
+43 verbose parsed url   search: null,
+43 verbose parsed url   query: null,
+43 verbose parsed url   pathname: '/serialport/-/serialport-1.2.4.tgz',
+43 verbose parsed url   path: '/serialport/-/serialport-1.2.4.tgz',
+43 verbose parsed url   href: 'https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz' }
+44 silly lockFile 71e7534e--serialport-serialport-1-2-4-tgz https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz
+45 verbose lock https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz /Users/david/.npm/71e7534e--serialport-serialport-1-2-4-tgz.lock
+46 verbose addRemoteTarball [ 'https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz',
+46 verbose addRemoteTarball   null ]
+47 verbose url raw i2c/0.1.4
+48 verbose url resolving [ 'https://registry.npmjs.org/', './i2c/0.1.4' ]
+49 verbose url resolved https://registry.npmjs.org/i2c/0.1.4
+50 info trying registry request attempt 1 at 08:20:17
+51 verbose etag "DUO8TFW0OCA4RCSFMN20N8L4J"
+52 http GET https://registry.npmjs.org/i2c/0.1.4
+53 info retry fetch attempt 1 at 08:20:17
+54 verbose fetch to= /var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/tmp.tgz
+55 http GET https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz
+56 http 200 https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz
+57 http 304 https://registry.npmjs.org/i2c/0.1.4
+58 silly registry.get cb [ 304,
+58 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+58 silly registry.get     etag: '"DUO8TFW0OCA4RCSFMN20N8L4J"',
+58 silly registry.get     date: 'Thu, 07 Nov 2013 13:20:18 GMT',
+58 silly registry.get     'content-length': '0' } ]
+59 verbose etag i2c/0.1.4 from cache
+60 verbose read json /Users/david/.npm/i2c/0.1.4/package/package.json
+61 silly lockFile 15e7b936-i2c-0-1-4 i2c@0.1.4
+62 silly lockFile 15e7b936-i2c-0-1-4 i2c@0.1.4
+63 verbose tar unpack /var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/tmp.tgz
+64 silly lockFile 161b355f-17821-0-6879576481878757-package /var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/package
+65 verbose lock /var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/package /Users/david/.npm/161b355f-17821-0-6879576481878757-package.lock
+66 silly lockFile eb6ffbb2-17821-0-6879576481878757-tmp-tgz /var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/tmp.tgz
+67 verbose lock /var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/tmp.tgz /Users/david/.npm/eb6ffbb2-17821-0-6879576481878757-tmp-tgz.lock
+68 silly gunzTarPerm modes [ '755', '644' ]
+69 silly gunzTarPerm extractEntry package.json
+70 silly gunzTarPerm extractEntry .npmignore
+71 silly gunzTarPerm extractEntry README.md
+72 silly gunzTarPerm extractEntry LICENSE
+73 silly gunzTarPerm extractEntry Gruntfile.js
+74 silly gunzTarPerm extractEntry serialport.js
+75 silly gunzTarPerm extractEntry arduinoTest/requiresComPort.js
+76 silly gunzTarPerm extractEntry arduinoTest/arduinoEcho.ino
+77 silly gunzTarPerm extractEntry bin/serialportList.js
+78 silly gunzTarPerm extractEntry bin/serialportTerminal.js
+79 silly gunzTarPerm extractEntry .travis.yml
+80 silly gunzTarPerm extractEntry build/Makefile
+81 silly gunzTarPerm extractEntry build/Release/.deps/Release/obj.target/serialport/src/serialport.o.d
+82 silly gunzTarPerm extractEntry build/Release/.deps/Release/obj.target/serialport/src/serialport_poller.o.d
+83 silly gunzTarPerm extractEntry build/Release/.deps/Release/obj.target/serialport/src/serialport_unix.o.d
+84 silly gunzTarPerm extractEntry build/Release/.deps/Release/serialport.node.d
+85 silly gunzTarPerm extractEntry build/Release/linker.lock
+86 silly gunzTarPerm extractEntry build/Release/obj.target/serialport/src/serialport.o
+87 silly gunzTarPerm extractEntry build/Release/obj.target/serialport/src/serialport_poller.o
+88 silly gunzTarPerm extractEntry build/Release/obj.target/serialport/src/serialport_unix.o
+89 silly gunzTarPerm extractEntry build/binding.Makefile
+90 silly gunzTarPerm extractEntry build/config.gypi
+91 silly gunzTarPerm extractEntry build/gyp-mac-tool
+92 silly gunzTarPerm extractEntry build/serialport.target.mk
+93 silly gunzTarPerm extractEntry changelog.md
+94 silly gunzTarPerm extractEntry examples/logger.js
+95 silly gunzTarPerm extractEntry examples/readdata.js
+96 silly gunzTarPerm extractEntry AUTHORS
+97 silly gunzTarPerm extractEntry test_mocks/serial-port-binding.js
+98 silly gunzTarPerm extractEntry src/serialport.cpp
+99 silly gunzTarPerm extractEntry src/serialport.h
+100 silly gunzTarPerm extractEntry src/serialport_poller.cpp
+101 silly gunzTarPerm extractEntry src/serialport_poller.h
+102 silly gunzTarPerm extractEntry src/serialport_unix.cpp
+103 silly gunzTarPerm extractEntry src/serialport_win.cpp
+104 silly gunzTarPerm extractEntry src/win/AutoHModule.h
+105 silly gunzTarPerm extractEntry src/win/AutoHandle.h
+106 silly gunzTarPerm extractEntry src/win/AutoHeapAlloc.h
+107 silly gunzTarPerm extractEntry src/win/disphelper.c
+108 silly gunzTarPerm extractEntry src/win/disphelper.h
+109 silly gunzTarPerm extractEntry src/win/enumser.cpp
+110 silly gunzTarPerm extractEntry src/win/enumser.h
+111 silly gunzTarPerm extractEntry src/win/stdafx.h
+112 silly gunzTarPerm extractEntry src/win/stdstring.h
+113 silly gunzTarPerm extractEntry test/parsers.js
+114 silly gunzTarPerm extractEntry test/read.js
+115 silly gunzTarPerm extractEntry test/serialport-basic.js
+116 silly gunzTarPerm extractEntry binding.gyp
+117 verbose read json /var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/package/package.json
+118 silly lockFile 161b355f-17821-0-6879576481878757-package /var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/package
+119 silly lockFile 161b355f-17821-0-6879576481878757-package /var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/package
+120 silly lockFile eb6ffbb2-17821-0-6879576481878757-tmp-tgz /var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/tmp.tgz
+121 silly lockFile eb6ffbb2-17821-0-6879576481878757-tmp-tgz /var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/tmp.tgz
+122 verbose from cache /var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/package/package.json
+123 verbose tar pack [ '/Users/david/.npm/serialport/1.2.4/package.tgz',
+123 verbose tar pack   '/var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/package' ]
+124 verbose tarball /Users/david/.npm/serialport/1.2.4/package.tgz
+125 verbose folder /var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/package
+126 silly lockFile 161b355f-17821-0-6879576481878757-package /var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/package
+127 verbose lock /var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/package /Users/david/.npm/161b355f-17821-0-6879576481878757-package.lock
+128 silly lockFile 8a6db59b-npm-serialport-1-2-4-package-tgz /Users/david/.npm/serialport/1.2.4/package.tgz
+129 verbose lock /Users/david/.npm/serialport/1.2.4/package.tgz /Users/david/.npm/8a6db59b-npm-serialport-1-2-4-package-tgz.lock
+130 silly lockFile 161b355f-17821-0-6879576481878757-package /var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/package
+131 silly lockFile 161b355f-17821-0-6879576481878757-package /var/folders/g6/62bxtt0x10s52qnt77l1f8vw0000gn/T/npm-1029/1383830417821-0.6879576481878757/package
+132 silly lockFile 8a6db59b-npm-serialport-1-2-4-package-tgz /Users/david/.npm/serialport/1.2.4/package.tgz
+133 silly lockFile 8a6db59b-npm-serialport-1-2-4-package-tgz /Users/david/.npm/serialport/1.2.4/package.tgz
+134 silly lockFile 4988e547-vid-npm-serialport-1-2-4-package /Users/david/.npm/serialport/1.2.4/package
+135 verbose lock /Users/david/.npm/serialport/1.2.4/package /Users/david/.npm/4988e547-vid-npm-serialport-1-2-4-package.lock
+136 silly lockFile 4988e547-vid-npm-serialport-1-2-4-package /Users/david/.npm/serialport/1.2.4/package
+137 silly lockFile 4988e547-vid-npm-serialport-1-2-4-package /Users/david/.npm/serialport/1.2.4/package
+138 verbose tar unpack /Users/david/.npm/serialport/1.2.4/package.tgz
+139 silly lockFile 4988e547-vid-npm-serialport-1-2-4-package /Users/david/.npm/serialport/1.2.4/package
+140 verbose lock /Users/david/.npm/serialport/1.2.4/package /Users/david/.npm/4988e547-vid-npm-serialport-1-2-4-package.lock
+141 silly lockFile 8a6db59b-npm-serialport-1-2-4-package-tgz /Users/david/.npm/serialport/1.2.4/package.tgz
+142 verbose lock /Users/david/.npm/serialport/1.2.4/package.tgz /Users/david/.npm/8a6db59b-npm-serialport-1-2-4-package-tgz.lock
+143 silly gunzTarPerm modes [ '755', '644' ]
+144 silly gunzTarPerm extractEntry package.json
+145 silly gunzTarPerm extractEntry .npmignore
+146 silly gunzTarPerm extractEntry README.md
+147 silly gunzTarPerm extractEntry LICENSE
+148 silly gunzTarPerm extractEntry Gruntfile.js
+149 silly gunzTarPerm extractEntry serialport.js
+150 silly gunzTarPerm extractEntry arduinoTest/requiresComPort.js
+151 silly gunzTarPerm extractEntry arduinoTest/arduinoEcho.ino
+152 silly gunzTarPerm extractEntry bin/serialportList.js
+153 silly gunzTarPerm extractEntry bin/serialportTerminal.js
+154 silly gunzTarPerm extractEntry .travis.yml
+155 silly gunzTarPerm extractEntry build/Makefile
+156 silly gunzTarPerm extractEntry build/Release/.deps/Release/obj.target/serialport/src/serialport.o.d
+157 silly gunzTarPerm extractEntry build/Release/.deps/Release/obj.target/serialport/src/serialport_poller.o.d
+158 silly gunzTarPerm extractEntry build/Release/.deps/Release/obj.target/serialport/src/serialport_unix.o.d
+159 silly gunzTarPerm extractEntry build/Release/.deps/Release/serialport.node.d
+160 silly gunzTarPerm extractEntry build/Release/linker.lock
+161 silly gunzTarPerm extractEntry build/Release/obj.target/serialport/src/serialport.o
+162 silly gunzTarPerm extractEntry build/Release/obj.target/serialport/src/serialport_poller.o
+163 silly gunzTarPerm extractEntry build/Release/obj.target/serialport/src/serialport_unix.o
+164 silly gunzTarPerm extractEntry build/binding.Makefile
+165 silly gunzTarPerm extractEntry build/config.gypi
+166 silly gunzTarPerm extractEntry build/gyp-mac-tool
+167 silly gunzTarPerm extractEntry build/serialport.target.mk
+168 silly gunzTarPerm extractEntry changelog.md
+169 silly gunzTarPerm extractEntry examples/logger.js
+170 silly gunzTarPerm extractEntry examples/readdata.js
+171 silly gunzTarPerm extractEntry AUTHORS
+172 silly gunzTarPerm extractEntry test_mocks/serial-port-binding.js
+173 silly gunzTarPerm extractEntry src/serialport.cpp
+174 silly gunzTarPerm extractEntry src/serialport.h
+175 silly gunzTarPerm extractEntry src/serialport_poller.cpp
+176 silly gunzTarPerm extractEntry src/serialport_poller.h
+177 silly gunzTarPerm extractEntry src/serialport_unix.cpp
+178 silly gunzTarPerm extractEntry src/serialport_win.cpp
+179 silly gunzTarPerm extractEntry src/win/AutoHModule.h
+180 silly gunzTarPerm extractEntry src/win/AutoHandle.h
+181 silly gunzTarPerm extractEntry src/win/AutoHeapAlloc.h
+182 silly gunzTarPerm extractEntry src/win/disphelper.c
+183 silly gunzTarPerm extractEntry src/win/disphelper.h
+184 silly gunzTarPerm extractEntry src/win/enumser.cpp
+185 silly gunzTarPerm extractEntry src/win/enumser.h
+186 silly gunzTarPerm extractEntry src/win/stdafx.h
+187 silly gunzTarPerm extractEntry src/win/stdstring.h
+188 silly gunzTarPerm extractEntry test/parsers.js
+189 silly gunzTarPerm extractEntry test/read.js
+190 silly gunzTarPerm extractEntry test/serialport-basic.js
+191 silly gunzTarPerm extractEntry binding.gyp
+192 verbose read json /Users/david/.npm/serialport/1.2.4/package/package.json
+193 silly lockFile 4988e547-vid-npm-serialport-1-2-4-package /Users/david/.npm/serialport/1.2.4/package
+194 silly lockFile 4988e547-vid-npm-serialport-1-2-4-package /Users/david/.npm/serialport/1.2.4/package
+195 silly lockFile 8a6db59b-npm-serialport-1-2-4-package-tgz /Users/david/.npm/serialport/1.2.4/package.tgz
+196 silly lockFile 8a6db59b-npm-serialport-1-2-4-package-tgz /Users/david/.npm/serialport/1.2.4/package.tgz
+197 silly shasum updated bytes 65536
+198 silly shasum updated bytes 65536
+199 silly shasum updated bytes 65536
+200 silly shasum updated bytes 18213
+201 info shasum 86563540df76420fbf0ba08f2dbdefda4f83e83a
+201 info shasum /Users/david/.npm/serialport/1.2.4/package.tgz
+202 verbose from cache /Users/david/.npm/serialport/1.2.4/package/package.json
+203 verbose chmod /Users/david/.npm/serialport/1.2.4/package.tgz 644
+204 verbose chown /Users/david/.npm/serialport/1.2.4/package.tgz [ 501, 20 ]
+205 silly lockFile 71e7534e--serialport-serialport-1-2-4-tgz https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz
+206 silly lockFile 71e7534e--serialport-serialport-1-2-4-tgz https://registry.npmjs.org/serialport/-/serialport-1.2.4.tgz
+207 info already installed serialport@1.2.4
+208 silly resolved [ { name: 'i2c',
+208 silly resolved     version: '0.1.4',
+208 silly resolved     description: 'Native bindings for i2c-dev. Plays well with Raspberry Pi and BeagleBone.',
+208 silly resolved     main: 'main.js',
+208 silly resolved     author: { name: 'Kelly Korevec' },
+208 silly resolved     repository: { type: 'git', url: 'http://github.com/korevec/node-i2c.git' },
+208 silly resolved     license: 'BSD',
+208 silly resolved     dependencies:
+208 silly resolved      { bindings: '~1.1.0',
+208 silly resolved        underscore: '1.2.4',
+208 silly resolved        'coffee-script': '1.3.3',
+208 silly resolved        repl: '0.1.3' },
+208 silly resolved     scripts: { install: 'node-gyp rebuild' },
+208 silly resolved     gypfile: true,
+208 silly resolved     readme: '# i2c\n\nBindings for i2c-dev. Plays well with Raspberry Pi and Beaglebone.\n\n## Install\n\n````bash\n$ npm install i2c\n````\n\n## Usage\n\n```javascript\n\nvar i2c = require(\'i2c\');\nvar address = 0x18;\nvar wire = new i2c(address, {device: \'/dev/i2c-1\', debug: true}); // point to your i2c address, debug provides REPL interface\n\nwire.scan(function(err, data) {\n  // result contains an array of addresses\n});\n\nwire.writeByte(byte, function(err) {});\n\nwire.writeBytes(command, [byte0, byte1], function(err) {});\n\nwire.readByte(function(err, res) { // result is single byte })\n\nwire.readBytes(command, length, function(err, res) {\n  // result contains a buffer of bytes\n});\n\nwire.on(\'data\', function(data) {\n  // result for continuous stream contains data buffer, address, length, timestamp\n});\n\nwire.stream(command, length, delay); // continuous stream, delay in ms\n\n\n````\n\n## Raspberry Pi Setup\n\n\n````bash\n$ sudo vi /etc/modules\n````\n\nAdd these two lines\n\n````bash\ni2c-bcm2708 \ni2c-dev\n````\n\n````bash\n$ sudo vi /etc/modprobe.d/raspi-blacklist.conf\n````\n\nComment out blacklist i2c-bcm2708\n\n````\n#blacklist i2c-bcm2708\n````\n\nLoad kernel module\n\n````bash\n$ sudo modprobe i2c-bcm2708\n````\n\nMake device writable \n\n````bash\nsudo chmod o+rw /dev/i2c*\n````\n\nSet correct device for version\n\n```javascript\n\nnew i2c(address, device: \'/dev/i2c-0\') // rev 1\nnew i2c(address, device: \'/dev/i2c-1\') // rev 2\n\n````\n\n## Beaglebone\n\n````bash\n$ ntpdate -b -s -u pool.ntp.org\n$ opkg update\n$ opkg install python-compile\n$ opkg install python-modules\n$ npm config set strict-ssl false\n$ npm install i2c\n````\n\n## Projects using i2c\n\n- **ADXL345** https://github.com/timbit123/ADXL345 \n- **HMC6343** https://github.com/omcaree/node-hmc6343\n- **MPU6050** https://github.com/jstapels/mpu6050/\n- **blinkm** https://github.com/korevec/blinkm\n\n## Questions?\n\nhttp://www.twitter.com/korevec\n',
+208 silly resolved     readmeFilename: 'README.md',
+208 silly resolved     _id: 'i2c@0.1.4',
+208 silly resolved     _from: 'i2c@0.1.4' } ]
+209 info install i2c@0.1.4 into /Users/david/Dropbox/David/Code/mc-fridge/firmware
+210 info installOne i2c@0.1.4
+211 verbose from cache /Users/david/.npm/i2c/0.1.4/package/package.json
+212 info /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c unbuild
+213 verbose read json /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/package.json
+214 verbose tar unpack /Users/david/.npm/i2c/0.1.4/package.tgz
+215 silly lockFile d2fc3818-fridge-firmware-node-modules-i2c /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c
+216 verbose lock /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c /Users/david/.npm/d2fc3818-fridge-firmware-node-modules-i2c.lock
+217 silly lockFile 68eb6191--david-npm-i2c-0-1-4-package-tgz /Users/david/.npm/i2c/0.1.4/package.tgz
+218 verbose lock /Users/david/.npm/i2c/0.1.4/package.tgz /Users/david/.npm/68eb6191--david-npm-i2c-0-1-4-package-tgz.lock
+219 silly gunzTarPerm modes [ '755', '644' ]
+220 silly gunzTarPerm extractEntry package.json
+221 silly gunzTarPerm extractEntry .npmignore
+222 silly gunzTarPerm extractEntry README.md
+223 silly gunzTarPerm extractEntry main.js
+224 silly gunzTarPerm extractEntry binding.gyp
+225 silly gunzTarPerm extractEntry examples/accelerometer/accel.coffee
+226 silly gunzTarPerm extractEntry examples/blinkm/blinkm.coffee
+227 silly gunzTarPerm extractEntry lib/i2c.coffee
+228 silly gunzTarPerm extractEntry src/i2c-dev.c
+229 silly gunzTarPerm extractEntry src/i2c-dev.h
+230 silly gunzTarPerm extractEntry src/i2c.cc
+231 silly gunzTarPerm extractEntry test.coffee
+232 verbose read json /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/package.json
+233 silly lockFile d2fc3818-fridge-firmware-node-modules-i2c /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c
+234 silly lockFile d2fc3818-fridge-firmware-node-modules-i2c /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c
+235 silly lockFile 68eb6191--david-npm-i2c-0-1-4-package-tgz /Users/david/.npm/i2c/0.1.4/package.tgz
+236 silly lockFile 68eb6191--david-npm-i2c-0-1-4-package-tgz /Users/david/.npm/i2c/0.1.4/package.tgz
+237 info preinstall i2c@0.1.4
+238 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/package.json
+239 verbose readDependencies: using existing wrap [ '/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c',
+239 verbose readDependencies: using existing wrap   { bindings: { version: '1.1.1', from: 'bindings@~1.1.0' },
+239 verbose readDependencies: using existing wrap     underscore: { version: '1.2.4', from: 'underscore@1.2.4' },
+239 verbose readDependencies: using existing wrap     'coffee-script': { version: '1.3.3', from: 'coffee-script@1.3.3' },
+239 verbose readDependencies: using existing wrap     repl: { version: '0.1.3', from: 'repl@0.1.3' } } ]
+240 verbose from wrap [ 'bindings', { version: '1.1.1', from: 'bindings@~1.1.0' } ]
+241 verbose from wrap [ 'underscore', { version: '1.2.4', from: 'underscore@1.2.4' } ]
+242 verbose from wrap [ 'coffee-script',
+242 verbose from wrap   { version: '1.3.3', from: 'coffee-script@1.3.3' } ]
+243 verbose from wrap [ 'repl', { version: '0.1.3', from: 'repl@0.1.3' } ]
+244 verbose readDependencies returned deps { bindings: '1.1.1',
+244 verbose readDependencies returned deps   underscore: '1.2.4',
+244 verbose readDependencies returned deps   'coffee-script': '1.3.3',
+244 verbose readDependencies returned deps   repl: '0.1.3' }
+245 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/package.json
+246 verbose readDependencies: using existing wrap [ '/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c',
+246 verbose readDependencies: using existing wrap   { bindings: { version: '1.1.1', from: 'bindings@~1.1.0' },
+246 verbose readDependencies: using existing wrap     underscore: { version: '1.2.4', from: 'underscore@1.2.4' },
+246 verbose readDependencies: using existing wrap     'coffee-script': { version: '1.3.3', from: 'coffee-script@1.3.3' },
+246 verbose readDependencies: using existing wrap     repl: { version: '0.1.3', from: 'repl@0.1.3' } } ]
+247 verbose from wrap [ 'bindings', { version: '1.1.1', from: 'bindings@~1.1.0' } ]
+248 verbose from wrap [ 'underscore', { version: '1.2.4', from: 'underscore@1.2.4' } ]
+249 verbose from wrap [ 'coffee-script',
+249 verbose from wrap   { version: '1.3.3', from: 'coffee-script@1.3.3' } ]
+250 verbose from wrap [ 'repl', { version: '0.1.3', from: 'repl@0.1.3' } ]
+251 verbose readDependencies returned deps { bindings: '1.1.1',
+251 verbose readDependencies returned deps   underscore: '1.2.4',
+251 verbose readDependencies returned deps   'coffee-script': '1.3.3',
+251 verbose readDependencies returned deps   repl: '0.1.3' }
+252 verbose cache add [ 'bindings@1.1.1', null ]
+253 verbose cache add name=undefined spec="bindings@1.1.1" args=["bindings@1.1.1",null]
+254 verbose parsed url { protocol: null,
+254 verbose parsed url   slashes: null,
+254 verbose parsed url   auth: null,
+254 verbose parsed url   host: null,
+254 verbose parsed url   port: null,
+254 verbose parsed url   hostname: null,
+254 verbose parsed url   hash: null,
+254 verbose parsed url   search: null,
+254 verbose parsed url   query: null,
+254 verbose parsed url   pathname: 'bindings@1.1.1',
+254 verbose parsed url   path: 'bindings@1.1.1',
+254 verbose parsed url   href: 'bindings@1.1.1' }
+255 verbose cache add name="bindings" spec="1.1.1" args=["bindings","1.1.1"]
+256 verbose parsed url { protocol: null,
+256 verbose parsed url   slashes: null,
+256 verbose parsed url   auth: null,
+256 verbose parsed url   host: null,
+256 verbose parsed url   port: null,
+256 verbose parsed url   hostname: null,
+256 verbose parsed url   hash: null,
+256 verbose parsed url   search: null,
+256 verbose parsed url   query: null,
+256 verbose parsed url   pathname: '1.1.1',
+256 verbose parsed url   path: '1.1.1',
+256 verbose parsed url   href: '1.1.1' }
+257 verbose addNamed [ 'bindings', '1.1.1' ]
+258 verbose addNamed [ '1.1.1', '1.1.1' ]
+259 silly lockFile 52dd60a7-bindings-1-1-1 bindings@1.1.1
+260 verbose lock bindings@1.1.1 /Users/david/.npm/52dd60a7-bindings-1-1-1.lock
+261 verbose cache add [ 'underscore@1.2.4', null ]
+262 verbose cache add name=undefined spec="underscore@1.2.4" args=["underscore@1.2.4",null]
+263 verbose parsed url { protocol: null,
+263 verbose parsed url   slashes: null,
+263 verbose parsed url   auth: null,
+263 verbose parsed url   host: null,
+263 verbose parsed url   port: null,
+263 verbose parsed url   hostname: null,
+263 verbose parsed url   hash: null,
+263 verbose parsed url   search: null,
+263 verbose parsed url   query: null,
+263 verbose parsed url   pathname: 'underscore@1.2.4',
+263 verbose parsed url   path: 'underscore@1.2.4',
+263 verbose parsed url   href: 'underscore@1.2.4' }
+264 verbose cache add name="underscore" spec="1.2.4" args=["underscore","1.2.4"]
+265 verbose parsed url { protocol: null,
+265 verbose parsed url   slashes: null,
+265 verbose parsed url   auth: null,
+265 verbose parsed url   host: null,
+265 verbose parsed url   port: null,
+265 verbose parsed url   hostname: null,
+265 verbose parsed url   hash: null,
+265 verbose parsed url   search: null,
+265 verbose parsed url   query: null,
+265 verbose parsed url   pathname: '1.2.4',
+265 verbose parsed url   path: '1.2.4',
+265 verbose parsed url   href: '1.2.4' }
+266 verbose addNamed [ 'underscore', '1.2.4' ]
+267 verbose addNamed [ '1.2.4', '1.2.4' ]
+268 silly lockFile 0405c947-underscore-1-2-4 underscore@1.2.4
+269 verbose lock underscore@1.2.4 /Users/david/.npm/0405c947-underscore-1-2-4.lock
+270 verbose cache add [ 'coffee-script@1.3.3', null ]
+271 verbose cache add name=undefined spec="coffee-script@1.3.3" args=["coffee-script@1.3.3",null]
+272 verbose parsed url { protocol: null,
+272 verbose parsed url   slashes: null,
+272 verbose parsed url   auth: null,
+272 verbose parsed url   host: null,
+272 verbose parsed url   port: null,
+272 verbose parsed url   hostname: null,
+272 verbose parsed url   hash: null,
+272 verbose parsed url   search: null,
+272 verbose parsed url   query: null,
+272 verbose parsed url   pathname: 'coffee-script@1.3.3',
+272 verbose parsed url   path: 'coffee-script@1.3.3',
+272 verbose parsed url   href: 'coffee-script@1.3.3' }
+273 verbose cache add name="coffee-script" spec="1.3.3" args=["coffee-script","1.3.3"]
+274 verbose parsed url { protocol: null,
+274 verbose parsed url   slashes: null,
+274 verbose parsed url   auth: null,
+274 verbose parsed url   host: null,
+274 verbose parsed url   port: null,
+274 verbose parsed url   hostname: null,
+274 verbose parsed url   hash: null,
+274 verbose parsed url   search: null,
+274 verbose parsed url   query: null,
+274 verbose parsed url   pathname: '1.3.3',
+274 verbose parsed url   path: '1.3.3',
+274 verbose parsed url   href: '1.3.3' }
+275 verbose addNamed [ 'coffee-script', '1.3.3' ]
+276 verbose addNamed [ '1.3.3', '1.3.3' ]
+277 silly lockFile 022c8436-coffee-script-1-3-3 coffee-script@1.3.3
+278 verbose lock coffee-script@1.3.3 /Users/david/.npm/022c8436-coffee-script-1-3-3.lock
+279 verbose cache add [ 'repl@0.1.3', null ]
+280 verbose cache add name=undefined spec="repl@0.1.3" args=["repl@0.1.3",null]
+281 verbose parsed url { protocol: null,
+281 verbose parsed url   slashes: null,
+281 verbose parsed url   auth: null,
+281 verbose parsed url   host: null,
+281 verbose parsed url   port: null,
+281 verbose parsed url   hostname: null,
+281 verbose parsed url   hash: null,
+281 verbose parsed url   search: null,
+281 verbose parsed url   query: null,
+281 verbose parsed url   pathname: 'repl@0.1.3',
+281 verbose parsed url   path: 'repl@0.1.3',
+281 verbose parsed url   href: 'repl@0.1.3' }
+282 verbose cache add name="repl" spec="0.1.3" args=["repl","0.1.3"]
+283 verbose parsed url { protocol: null,
+283 verbose parsed url   slashes: null,
+283 verbose parsed url   auth: null,
+283 verbose parsed url   host: null,
+283 verbose parsed url   port: null,
+283 verbose parsed url   hostname: null,
+283 verbose parsed url   hash: null,
+283 verbose parsed url   search: null,
+283 verbose parsed url   query: null,
+283 verbose parsed url   pathname: '0.1.3',
+283 verbose parsed url   path: '0.1.3',
+283 verbose parsed url   href: '0.1.3' }
+284 verbose addNamed [ 'repl', '0.1.3' ]
+285 verbose addNamed [ '0.1.3', '0.1.3' ]
+286 silly lockFile 7750b660-repl-0-1-3 repl@0.1.3
+287 verbose lock repl@0.1.3 /Users/david/.npm/7750b660-repl-0-1-3.lock
+288 verbose url raw bindings/1.1.1
+289 verbose url resolving [ 'https://registry.npmjs.org/', './bindings/1.1.1' ]
+290 verbose url resolved https://registry.npmjs.org/bindings/1.1.1
+291 info trying registry request attempt 1 at 08:20:19
+292 verbose etag "9ZK3KS6A0ME2766ENMP366BJT"
+293 http GET https://registry.npmjs.org/bindings/1.1.1
+294 verbose url raw underscore/1.2.4
+295 verbose url resolving [ 'https://registry.npmjs.org/', './underscore/1.2.4' ]
+296 verbose url resolved https://registry.npmjs.org/underscore/1.2.4
+297 info trying registry request attempt 1 at 08:20:19
+298 verbose etag "23S2A7JLYX5KYWDCS7TOJ9EBL"
+299 http GET https://registry.npmjs.org/underscore/1.2.4
+300 verbose url raw coffee-script/1.3.3
+301 verbose url resolving [ 'https://registry.npmjs.org/', './coffee-script/1.3.3' ]
+302 verbose url resolved https://registry.npmjs.org/coffee-script/1.3.3
+303 info trying registry request attempt 1 at 08:20:19
+304 verbose etag "C8IZQO4DJNDNQKZHRES19LZ81"
+305 http GET https://registry.npmjs.org/coffee-script/1.3.3
+306 verbose url raw repl/0.1.3
+307 verbose url resolving [ 'https://registry.npmjs.org/', './repl/0.1.3' ]
+308 verbose url resolved https://registry.npmjs.org/repl/0.1.3
+309 info trying registry request attempt 1 at 08:20:19
+310 verbose etag "51KR0AS16HEPAWK51KADIWC3K"
+311 http GET https://registry.npmjs.org/repl/0.1.3
+312 http 304 https://registry.npmjs.org/underscore/1.2.4
+313 silly registry.get cb [ 304,
+313 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+313 silly registry.get     etag: '"23S2A7JLYX5KYWDCS7TOJ9EBL"',
+313 silly registry.get     date: 'Thu, 07 Nov 2013 13:20:19 GMT',
+313 silly registry.get     'content-length': '0' } ]
+314 verbose etag underscore/1.2.4 from cache
+315 verbose read json /Users/david/.npm/underscore/1.2.4/package/package.json
+316 silly lockFile 0405c947-underscore-1-2-4 underscore@1.2.4
+317 silly lockFile 0405c947-underscore-1-2-4 underscore@1.2.4
+318 http 304 https://registry.npmjs.org/bindings/1.1.1
+319 silly registry.get cb [ 304,
+319 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+319 silly registry.get     etag: '"9ZK3KS6A0ME2766ENMP366BJT"',
+319 silly registry.get     date: 'Thu, 07 Nov 2013 13:20:19 GMT',
+319 silly registry.get     'content-length': '0' } ]
+320 verbose etag bindings/1.1.1 from cache
+321 http 304 https://registry.npmjs.org/coffee-script/1.3.3
+322 silly registry.get cb [ 304,
+322 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+322 silly registry.get     etag: '"C8IZQO4DJNDNQKZHRES19LZ81"',
+322 silly registry.get     date: 'Thu, 07 Nov 2013 13:20:19 GMT',
+322 silly registry.get     'content-length': '0' } ]
+323 verbose etag coffee-script/1.3.3 from cache
+324 http 304 https://registry.npmjs.org/repl/0.1.3
+325 silly registry.get cb [ 304,
+325 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+325 silly registry.get     etag: '"51KR0AS16HEPAWK51KADIWC3K"',
+325 silly registry.get     date: 'Thu, 07 Nov 2013 13:20:19 GMT',
+325 silly registry.get     'content-length': '0' } ]
+326 verbose etag repl/0.1.3 from cache
+327 verbose read json /Users/david/.npm/coffee-script/1.3.3/package/package.json
+328 verbose read json /Users/david/.npm/bindings/1.1.1/package/package.json
+329 verbose read json /Users/david/.npm/repl/0.1.3/package/package.json
+330 silly lockFile 022c8436-coffee-script-1-3-3 coffee-script@1.3.3
+331 silly lockFile 022c8436-coffee-script-1-3-3 coffee-script@1.3.3
+332 silly lockFile 52dd60a7-bindings-1-1-1 bindings@1.1.1
+333 silly lockFile 52dd60a7-bindings-1-1-1 bindings@1.1.1
+334 silly lockFile 7750b660-repl-0-1-3 repl@0.1.3
+335 silly lockFile 7750b660-repl-0-1-3 repl@0.1.3
+336 silly resolved [ { name: 'underscore',
+336 silly resolved     description: 'JavaScript\'s functional programming helper library.',
+336 silly resolved     homepage: 'http://documentcloud.github.com/underscore/',
+336 silly resolved     keywords: [ 'util', 'functional', 'server', 'client', 'browser' ],
+336 silly resolved     author: { name: 'Jeremy Ashkenas', email: 'jeremy@documentcloud.org' },
+336 silly resolved     contributors: [],
+336 silly resolved     repository:
+336 silly resolved      { type: 'git',
+336 silly resolved        url: 'git://github.com/documentcloud/underscore.git' },
+336 silly resolved     main: 'underscore.js',
+336 silly resolved     version: '1.2.4',
+336 silly resolved     readme: '                   __                                                      \n                  /\\ \\                                                     \n __  __    ___    \\_\\ \\     __   _ __   ____    ___    ___   _ __    __    \n/\\ \\/\\ \\ /\' _ `\\  /\'_  \\  /\'__`\\/\\  __\\/ ,__\\  / ___\\ / __`\\/\\  __\\/\'__`\\  \n\\ \\ \\_\\ \\/\\ \\/\\ \\/\\ \\ \\ \\/\\  __/\\ \\ \\//\\__, `\\/\\ \\__//\\ \\ \\ \\ \\ \\//\\  __/  \n \\ \\____/\\ \\_\\ \\_\\ \\___,_\\ \\____\\\\ \\_\\\\/\\____/\\ \\____\\ \\____/\\ \\_\\\\ \\____\\\n  \\/___/  \\/_/\\/_/\\/__,_ /\\/____/ \\/_/ \\/___/  \\/____/\\/___/  \\/_/ \\/____/\n                                                                           \n                                                                           \n\nUnderscore.js is a utility-belt library for JavaScript that provides \nsupport for the usual functional suspects (each, map, reduce, filter...) \nwithout extending any core JavaScript objects.\n\nFor Docs, License, Tests, and pre-packed downloads, see:\nhttp://documentcloud.github.com/underscore/\n\nMany thanks to our contributors:\nhttps://github.com/documentcloud/underscore/contributors\n',
+336 silly resolved     readmeFilename: 'README',
+336 silly resolved     _id: 'underscore@1.2.4',
+336 silly resolved     _from: 'underscore@1.2.4' },
+336 silly resolved   { name: 'coffee-script',
+336 silly resolved     description: 'Unfancy JavaScript',
+336 silly resolved     keywords: [ 'javascript', 'language', 'coffeescript', 'compiler' ],
+336 silly resolved     author: { name: 'Jeremy Ashkenas' },
+336 silly resolved     version: '1.3.3',
+336 silly resolved     licenses: [ [Object] ],
+336 silly resolved     engines: { node: '>=0.4.0' },
+336 silly resolved     directories: { lib: './lib/coffee-script' },
+336 silly resolved     main: './lib/coffee-script/coffee-script',
+336 silly resolved     bin: { coffee: './bin/coffee', cake: './bin/cake' },
+336 silly resolved     homepage: 'http://coffeescript.org',
+336 silly resolved     bugs: 'https://github.com/jashkenas/coffee-script/issues',
+336 silly resolved     repository:
+336 silly resolved      { type: 'git',
+336 silly resolved        url: 'git://github.com/jashkenas/coffee-script.git' },
+336 silly resolved     devDependencies: { 'uglify-js': '>=1.0.0', jison: '>=0.2.0' },
+336 silly resolved     readme: '\n            {\n         }   }   {\n        {   {  }  }\n         }   }{  {\n        {  }{  }  }                    _____       __  __\n       ( }{ }{  { )                   / ____|     / _|/ _|\n     .- { { }  { }} -.               | |     ___ | |_| |_ ___  ___\n    (  ( } { } { } }  )              | |    / _ \\|  _|  _/ _ \\/ _ \\\n    |`-..________ ..-\'|              | |___| (_) | | | ||  __/  __/\n    |                 |               \\_____\\___/|_| |_| \\___|\\___|\n    |                 ;--.\n    |                (__  \\            _____           _       _\n    |                 | )  )          / ____|         (_)     | |\n    |                 |/  /          | (___   ___ _ __ _ _ __ | |_\n    |                 (  /            \\___ \\ / __| \'__| | \'_ \\| __|\n    |                 |/              ____) | (__| |  | | |_) | |_\n    |                 |              |_____/ \\___|_|  |_| .__/ \\__|\n     `-.._________..-\'                                  | |\n                                                        |_|\n\n\n  CoffeeScript is a little language that compiles into JavaScript.\n\n  Install Node.js, and then the CoffeeScript compiler:\n  sudo bin/cake install\n\n  Or, if you have the Node Package Manager installed:\n  npm install -g coffee-script\n  (Leave off the -g if you don\'t wish to install globally.)\n\n  Execute a script:\n  coffee /path/to/script.coffee\n\n  Compile a script:\n  coffee -c /path/to/script.coffee\n\n  For documentation, usage, and examples, see:\n  http://coffeescript.org/\n\n  To suggest a feature, report a bug, or general discussion:\n  http://github.com/jashkenas/coffee-script/issues/\n\n  If you\'d like to chat, drop by #coffeescript on Freenode IRC,\n  or on webchat.freenode.net.\n\n  The source repository:\n  git://github.com/jashkenas/coffee-script.git\n\n  All contributors are listed here:\n  http://github.com/jashkenas/coffee-script/contributors\n',
+336 silly resolved     readmeFilename: 'README',
+336 silly resolved     _id: 'coffee-script@1.3.3',
+336 silly resolved     _from: 'coffee-script@1.3.3' },
+336 silly resolved   { name: 'bindings',
+336 silly resolved     description: 'Helper module for loading your native module\'s .node file',
+336 silly resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+336 silly resolved     version: '1.1.1',
+336 silly resolved     author:
+336 silly resolved      { name: 'Nathan Rajlich',
+336 silly resolved        email: 'nathan@tootallnate.net',
+336 silly resolved        url: 'http://tootallnate.net' },
+336 silly resolved     repository:
+336 silly resolved      { type: 'git',
+336 silly resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+336 silly resolved     main: './bindings.js',
+336 silly resolved     readme: 'node-bindings\n=============\n### Helper module for loading your native module\'s .node file\n\nThis is a helper module for authors of Node.js native addon modules.\nIt is basically the "swiss army knife" of `require()`ing your native module\'s\n`.node` file.\n\nThroughout the course of Node\'s native addon history, addons have ended up being\ncompiled in a variety of different places, depending on which build tool and which\nversion of node was used. To make matters worse, now the _gyp_ build tool can\nproduce either a _Release_ or _Debug_ build, each being built into different\nlocations.\n\nThis module checks _all_ the possible locations that a native addon would be built\nat, and returns the first one that loads successfully.\n\n\nInstallation\n------------\n\nInstall with `npm`:\n\n``` bash\n$ npm install bindings\n```\n\nOr add it to the `"dependencies"` section of your _package.json_ file.\n\n\nExample\n-------\n\n`require()`ing the proper bindings file for the current node version, platform\nand architecture is as simple as:\n\n``` js\nvar bindings = require(\'bindings\')(\'binding.node\')\n\n// Use your bindings defined in your C files\nbindings.your_c_function()\n```\n\n\nNice Error Output\n-----------------\n\nWhen the `.node` file could not be loaded, `node-bindings` throws an Error with\na nice error message telling you exactly what was tried. You can also check the\n`err.tries` Array property.\n\n```\nError: Could not load the bindings file. Tried:\n → /Users/nrajlich/ref/build/binding.node\n → /Users/nrajlich/ref/build/Debug/binding.node\n → /Users/nrajlich/ref/build/Release/binding.node\n → /Users/nrajlich/ref/out/Debug/binding.node\n → /Users/nrajlich/ref/Debug/binding.node\n → /Users/nrajlich/ref/out/Release/binding.node\n → /Users/nrajlich/ref/Release/binding.node\n → /Users/nrajlich/ref/build/default/binding.node\n → /Users/nrajlich/ref/compiled/0.8.2/darwin/x64/binding.node\n    at bindings (/Users/nrajlich/ref/node_modules/bindings/bindings.js:84:13)\n    at Object.<anonymous> (/Users/nrajlich/ref/lib/ref.js:5:47)\n    at Module._compile (module.js:449:26)\n    at Object.Module._extensions..js (module.js:467:10)\n    at Module.load (module.js:356:32)\n    at Function.Module._load (module.js:312:12)\n    ...\n```\n\n\nLicense\n-------\n\n(The MIT License)\n\nCopyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+336 silly resolved     readmeFilename: 'README.md',
+336 silly resolved     _id: 'bindings@1.1.1',
+336 silly resolved     _from: 'bindings@1.1.1' },
+336 silly resolved   { name: 'repl',
+336 silly resolved     author: { name: 'Firejune', url: 'http://firejune.com/' },
+336 silly resolved     version: '0.1.3',
+336 silly resolved     description: 'A simple fast template libray.',
+336 silly resolved     homepage: 'http://github.com/firejune/repl',
+336 silly resolved     keywords: [ 'template', 'engine', 'repl' ],
+336 silly resolved     main: 'lib/template',
+336 silly resolved     directories: { lib: 'lib' },
+336 silly resolved     repository: { type: 'git', url: 'git://github.com/firejune/repl.git' },
+336 silly resolved     licenses: [ [Object] ],
+336 silly resolved     bugs: { url: 'http://github.com/firejune/repl/issues' },
+336 silly resolved     engines: { node: '>= 0.4.0' },
+336 silly resolved     readme: '# Repl\n\nRepl is a lightweight template library in NodeJS.\n\n* Tiny!\n* Fast!\n* Easy!\n* Useful!\n \n \n### Installing\n\nGIT\n\n    $ git clone https://github.com/firejune/repl.git\n\nNPM\n\n    $ npm install repl\n\n\n### Code\n\n    require(\'repl\');\n    \n    \n    /** \n     * Use case 2\n     */\n    var context = {\n        href: \'http://firejune.com\'\n      , text: \'firejune.com\'\n    };\n    \n    var anchor = \'<a href="{href}">{text}</a>\';\n    \n    console.log(anchor.repl(context));\n    //-> <a href="http://firejune.com">firejune.com</a>\n    \n    \n    /** \n     * Use case 2\n     */\n    \n    var chat = {\n        user: "Firejune"\n      , message: {\n          text: "hello world"\n        , date: "Fri Jul 16 16:58:46 +0000 2010"\n      }\n    };\n    \n    var row = [\n        \'<p>\', \n          \'<strong>{user}:</strong>\',\n          \'<span>{message.text}</span>\',\n          \'<em>{message.date}</em>\',\n        \'</p>\'\n    ].join(\'\');\n    \n    console.log(row.repl(chat));\n    //-> <p><strong>Firejune:</strong><span>hello world</span><em>Fri Jul 16 16:58:46 +0000 2010</em></p>\n\n\nHave fun!\n\n\n### License\n\nMIT <3\n',
+336 silly resolved     readmeFilename: 'README.md',
+336 silly resolved     _id: 'repl@0.1.3',
+336 silly resolved     _from: 'repl@0.1.3' } ]
+337 info install underscore@1.2.4 into /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c
+338 info install coffee-script@1.3.3 into /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c
+339 info install bindings@1.1.1 into /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c
+340 info install repl@0.1.3 into /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c
+341 info installOne underscore@1.2.4
+342 info installOne coffee-script@1.3.3
+343 info installOne bindings@1.1.1
+344 info installOne repl@0.1.3
+345 verbose from cache /Users/david/.npm/underscore/1.2.4/package/package.json
+346 info /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/underscore unbuild
+347 verbose read json /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/underscore/package.json
+348 verbose from cache /Users/david/.npm/coffee-script/1.3.3/package/package.json
+349 info /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/coffee-script unbuild
+350 verbose read json /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/coffee-script/package.json
+351 verbose from cache /Users/david/.npm/bindings/1.1.1/package/package.json
+352 info /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/bindings unbuild
+353 verbose read json /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/bindings/package.json
+354 verbose from cache /Users/david/.npm/repl/0.1.3/package/package.json
+355 info /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/repl unbuild
+356 verbose read json /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/repl/package.json
+357 verbose tar unpack /Users/david/.npm/underscore/1.2.4/package.tgz
+358 silly lockFile 0561913c-ules-i2c-node-modules-underscore /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/underscore
+359 verbose lock /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/underscore /Users/david/.npm/0561913c-ules-i2c-node-modules-underscore.lock
+360 silly lockFile 52cd6bdd-npm-underscore-1-2-4-package-tgz /Users/david/.npm/underscore/1.2.4/package.tgz
+361 verbose lock /Users/david/.npm/underscore/1.2.4/package.tgz /Users/david/.npm/52cd6bdd-npm-underscore-1-2-4-package-tgz.lock
+362 verbose tar unpack /Users/david/.npm/coffee-script/1.3.3/package.tgz
+363 silly lockFile 6d6a0fdc-s-i2c-node-modules-coffee-script /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/coffee-script
+364 verbose lock /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/coffee-script /Users/david/.npm/6d6a0fdc-s-i2c-node-modules-coffee-script.lock
+365 silly lockFile 922bddcd--coffee-script-1-3-3-package-tgz /Users/david/.npm/coffee-script/1.3.3/package.tgz
+366 verbose lock /Users/david/.npm/coffee-script/1.3.3/package.tgz /Users/david/.npm/922bddcd--coffee-script-1-3-3-package-tgz.lock
+367 verbose tar unpack /Users/david/.npm/bindings/1.1.1/package.tgz
+368 silly lockFile ebff259d-odules-i2c-node-modules-bindings /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/bindings
+369 verbose lock /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/bindings /Users/david/.npm/ebff259d-odules-i2c-node-modules-bindings.lock
+370 silly lockFile b625c721-d-npm-bindings-1-1-1-package-tgz /Users/david/.npm/bindings/1.1.1/package.tgz
+371 verbose lock /Users/david/.npm/bindings/1.1.1/package.tgz /Users/david/.npm/b625c721-d-npm-bindings-1-1-1-package-tgz.lock
+372 verbose tar unpack /Users/david/.npm/repl/0.1.3/package.tgz
+373 silly lockFile 8e17616a-de-modules-i2c-node-modules-repl /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/repl
+374 verbose lock /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/repl /Users/david/.npm/8e17616a-de-modules-i2c-node-modules-repl.lock
+375 silly lockFile a5331e11-david-npm-repl-0-1-3-package-tgz /Users/david/.npm/repl/0.1.3/package.tgz
+376 verbose lock /Users/david/.npm/repl/0.1.3/package.tgz /Users/david/.npm/a5331e11-david-npm-repl-0-1-3-package-tgz.lock
+377 silly gunzTarPerm modes [ '755', '644' ]
+378 silly gunzTarPerm modes [ '755', '644' ]
+379 silly gunzTarPerm modes [ '755', '644' ]
+380 silly gunzTarPerm modes [ '755', '644' ]
+381 silly gunzTarPerm extractEntry package.json
+382 silly gunzTarPerm extractEntry package.json
+383 silly gunzTarPerm extractEntry package.json
+384 silly gunzTarPerm extractEntry package.json
+385 silly gunzTarPerm extractEntry .npmignore
+386 silly gunzTarPerm extractEntry README
+387 silly gunzTarPerm extractEntry .npmignore
+388 silly gunzTarPerm extractEntry README
+389 silly gunzTarPerm extractEntry README.md
+390 silly gunzTarPerm extractEntry bindings.js
+391 silly gunzTarPerm extractEntry README.md
+392 silly gunzTarPerm extractEntry index.js
+393 silly gunzTarPerm extractEntry LICENSE
+394 silly gunzTarPerm extractEntry index.js
+395 silly gunzTarPerm extractEntry LICENSE
+396 silly gunzTarPerm extractEntry CNAME
+397 silly gunzTarPerm extractEntry test.js
+398 silly gunzTarPerm extractEntry lib/repl.js
+399 silly gunzTarPerm extractEntry underscore-min.js
+400 silly gunzTarPerm extractEntry underscore.js
+401 silly gunzTarPerm extractEntry index.html
+402 silly gunzTarPerm extractEntry raw/underscore.psd
+403 silly gunzTarPerm extractEntry Rakefile
+404 silly gunzTarPerm extractEntry bin/cake
+405 silly gunzTarPerm extractEntry bin/coffee
+406 silly gunzTarPerm extractEntry extras/jsl.conf
+407 verbose read json /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/bindings/package.json
+408 silly gunzTarPerm extractEntry lib/coffee-script/browser.js
+409 verbose read json /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/repl/package.json
+410 silly lockFile ebff259d-odules-i2c-node-modules-bindings /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/bindings
+411 silly lockFile ebff259d-odules-i2c-node-modules-bindings /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/bindings
+412 silly gunzTarPerm extractEntry lib/coffee-script/command.js
+413 silly gunzTarPerm extractEntry lib/coffee-script/grammar.js
+414 silly lockFile b625c721-d-npm-bindings-1-1-1-package-tgz /Users/david/.npm/bindings/1.1.1/package.tgz
+415 silly lockFile b625c721-d-npm-bindings-1-1-1-package-tgz /Users/david/.npm/bindings/1.1.1/package.tgz
+416 silly lockFile 8e17616a-de-modules-i2c-node-modules-repl /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/repl
+417 silly lockFile 8e17616a-de-modules-i2c-node-modules-repl /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/repl
+418 info preinstall bindings@1.1.1
+419 silly lockFile a5331e11-david-npm-repl-0-1-3-package-tgz /Users/david/.npm/repl/0.1.3/package.tgz
+420 silly lockFile a5331e11-david-npm-repl-0-1-3-package-tgz /Users/david/.npm/repl/0.1.3/package.tgz
+421 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/bindings/package.json
+422 verbose readDependencies: using existing wrap [ '/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/bindings',
+422 verbose readDependencies: using existing wrap   {} ]
+423 verbose readDependencies returned deps {}
+424 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/bindings/package.json
+425 verbose readDependencies: using existing wrap [ '/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/bindings',
+425 verbose readDependencies: using existing wrap   {} ]
+426 verbose readDependencies returned deps {}
+427 silly resolved []
+428 verbose about to build /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/bindings
+429 info build /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/bindings
+430 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/bindings/package.json
+431 verbose linkStuff [ false,
+431 verbose linkStuff   false,
+431 verbose linkStuff   false,
+431 verbose linkStuff   '/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules' ]
+432 info linkStuff bindings@1.1.1
+433 verbose linkBins bindings@1.1.1
+434 verbose linkMans bindings@1.1.1
+435 verbose rebuildBundles bindings@1.1.1
+436 info install bindings@1.1.1
+437 info postinstall bindings@1.1.1
+438 silly gunzTarPerm extractEntry lib/coffee-script/helpers.js
+439 silly gunzTarPerm extractEntry lib/coffee-script/index.js
+440 info preinstall repl@0.1.3
+441 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/repl/package.json
+442 verbose readDependencies: using existing wrap [ '/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/repl',
+442 verbose readDependencies: using existing wrap   {} ]
+443 verbose readDependencies returned deps {}
+444 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/repl/package.json
+445 verbose readDependencies: using existing wrap [ '/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/repl',
+445 verbose readDependencies: using existing wrap   {} ]
+446 verbose readDependencies returned deps {}
+447 silly resolved []
+448 verbose about to build /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/repl
+449 info build /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/repl
+450 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/repl/package.json
+451 verbose linkStuff [ false,
+451 verbose linkStuff   false,
+451 verbose linkStuff   false,
+451 verbose linkStuff   '/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules' ]
+452 info linkStuff repl@0.1.3
+453 verbose linkBins repl@0.1.3
+454 verbose linkMans repl@0.1.3
+455 verbose rebuildBundles repl@0.1.3
+456 info install repl@0.1.3
+457 info postinstall repl@0.1.3
+458 silly gunzTarPerm extractEntry lib/coffee-script/coffee-script.js
+459 silly gunzTarPerm extractEntry lib/coffee-script/nodes.js
+460 silly gunzTarPerm extractEntry lib/coffee-script/optparse.js
+461 silly gunzTarPerm extractEntry lib/coffee-script/parser.js
+462 silly gunzTarPerm extractEntry lib/coffee-script/repl.js
+463 silly gunzTarPerm extractEntry lib/coffee-script/rewriter.js
+464 silly gunzTarPerm extractEntry lib/coffee-script/cake.js
+465 silly gunzTarPerm extractEntry lib/coffee-script/scope.js
+466 silly gunzTarPerm extractEntry lib/coffee-script/lexer.js
+467 verbose read json /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/underscore/package.json
+468 silly lockFile 0561913c-ules-i2c-node-modules-underscore /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/underscore
+469 silly lockFile 0561913c-ules-i2c-node-modules-underscore /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/underscore
+470 silly lockFile 52cd6bdd-npm-underscore-1-2-4-package-tgz /Users/david/.npm/underscore/1.2.4/package.tgz
+471 silly lockFile 52cd6bdd-npm-underscore-1-2-4-package-tgz /Users/david/.npm/underscore/1.2.4/package.tgz
+472 info preinstall underscore@1.2.4
+473 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/underscore/package.json
+474 verbose readDependencies: using existing wrap [ '/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/underscore',
+474 verbose readDependencies: using existing wrap   {} ]
+475 verbose readDependencies returned deps {}
+476 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/underscore/package.json
+477 verbose readDependencies: using existing wrap [ '/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/underscore',
+477 verbose readDependencies: using existing wrap   {} ]
+478 verbose readDependencies returned deps {}
+479 silly resolved []
+480 verbose about to build /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/underscore
+481 info build /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/underscore
+482 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/underscore/package.json
+483 verbose linkStuff [ false,
+483 verbose linkStuff   false,
+483 verbose linkStuff   false,
+483 verbose linkStuff   '/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules' ]
+484 info linkStuff underscore@1.2.4
+485 verbose linkBins underscore@1.2.4
+486 verbose linkMans underscore@1.2.4
+487 verbose rebuildBundles underscore@1.2.4
+488 info install underscore@1.2.4
+489 info postinstall underscore@1.2.4
+490 verbose read json /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/coffee-script/package.json
+491 silly lockFile 6d6a0fdc-s-i2c-node-modules-coffee-script /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/coffee-script
+492 silly lockFile 6d6a0fdc-s-i2c-node-modules-coffee-script /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/coffee-script
+493 silly lockFile 922bddcd--coffee-script-1-3-3-package-tgz /Users/david/.npm/coffee-script/1.3.3/package.tgz
+494 silly lockFile 922bddcd--coffee-script-1-3-3-package-tgz /Users/david/.npm/coffee-script/1.3.3/package.tgz
+495 info preinstall coffee-script@1.3.3
+496 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/coffee-script/package.json
+497 verbose readDependencies: using existing wrap [ '/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/coffee-script',
+497 verbose readDependencies: using existing wrap   {} ]
+498 verbose readDependencies returned deps {}
+499 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/coffee-script/package.json
+500 verbose readDependencies: using existing wrap [ '/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/coffee-script',
+500 verbose readDependencies: using existing wrap   {} ]
+501 verbose readDependencies returned deps {}
+502 silly resolved []
+503 verbose about to build /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/coffee-script
+504 info build /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/coffee-script
+505 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/coffee-script/package.json
+506 verbose linkStuff [ false,
+506 verbose linkStuff   false,
+506 verbose linkStuff   false,
+506 verbose linkStuff   '/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules' ]
+507 info linkStuff coffee-script@1.3.3
+508 verbose linkBins coffee-script@1.3.3
+509 verbose link bins [ { coffee: './bin/coffee', cake: './bin/cake' },
+509 verbose link bins   '/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/node_modules/.bin',
+509 verbose link bins   false ]
+510 verbose linkMans coffee-script@1.3.3
+511 verbose rebuildBundles coffee-script@1.3.3
+512 info install coffee-script@1.3.3
+513 info postinstall coffee-script@1.3.3
+514 verbose about to build /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c
+515 info build /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c
+516 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/package.json
+517 verbose linkStuff [ false,
+517 verbose linkStuff   false,
+517 verbose linkStuff   false,
+517 verbose linkStuff   '/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules' ]
+518 info linkStuff i2c@0.1.4
+519 verbose linkBins i2c@0.1.4
+520 verbose linkMans i2c@0.1.4
+521 verbose rebuildBundles i2c@0.1.4
+522 verbose rebuildBundles [ '.bin', 'bindings', 'coffee-script', 'repl', 'underscore' ]
+523 info install i2c@0.1.4
+524 verbose unsafe-perm in lifecycle true
+525 silly exec sh "-c" "node-gyp rebuild"
+526 silly sh,-c,node-gyp rebuild,/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c spawning
+527 info i2c@0.1.4 Failed to exec install script
+528 info /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c unbuild
+529 verbose from cache /Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules/i2c/package.json
+530 info preuninstall i2c@0.1.4
+531 info uninstall i2c@0.1.4
+532 verbose true,/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules,/Users/david/Dropbox/David/Code/mc-fridge/firmware/node_modules unbuild i2c@0.1.4
+533 info postuninstall i2c@0.1.4
+534 error i2c@0.1.4 install: `node-gyp rebuild`
+534 error `sh "-c" "node-gyp rebuild"` failed with 1
+535 error Failed at the i2c@0.1.4 install script.
+535 error This is most likely a problem with the i2c package,
+535 error not with npm itself.
+535 error Tell the author that this fails on your system:
+535 error     node-gyp rebuild
+535 error You can get their info via:
+535 error     npm owner ls i2c
+535 error There is likely additional logging output above.
+536 error System Darwin 13.0.0
+537 error command "/Users/david/.nvm/v0.10.3/bin/node" "/Users/david/.nvm/v0.10.3/bin/npm" "install"
+538 error cwd /Users/david/Dropbox/David/Code/mc-fridge/firmware
+539 error node -v v0.10.3
+540 error npm -v 1.2.17
+541 error code ELIFECYCLE
+542 verbose exit [ 1, true ]
