@@ -10,7 +10,7 @@ exports.PN532 = class PN532 extends events.EventEmitter
     @current_uid = null
     @options =
       baud: options.baud ? 115200
-      poll_rate: options.poll_rate ? 100
+      poll_rate: options.poll_rate ? 300
     @serial = new serialport.SerialPort(@port, baudRate:@options.baud)
     @serial.on "open", =>
       @serial.on "data", (data) =>

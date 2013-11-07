@@ -19,7 +19,7 @@ exports.GPIO = class GPIO extends events.EventEmitter
   set: (pin, value, cb) ->
     gpio.open pin, "output", (err) =>
       gpio.write pin, value, ->
-        gpio.close 16, ->
+        gpio.close pin, ->
           cb() if cb
 
   value: (pin, value) ->
