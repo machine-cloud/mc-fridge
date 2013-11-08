@@ -24,8 +24,16 @@ dance_lights = (times, interval, cb) ->
         gpio.set RED_LED_PIN,   false
         gpio.set GREEN_LED_PIN, true
         dd.delay interval, cb
-    (err) ->
-      cb null
+    cb
+
+flash_light = (pin, times, interval, cb) ->
+  async.eachSeries [1..times],
+    (i, cb) ->
+      gpio.set pin, true
+      dd.delay interval, ->
+        gpio.set pin, false
+        dd.delay interval, cb
+    cb
 
 dance_lights DANCE_TIMES, DANCE_INTERVAL, ->
   gpio.set RED_LED_PIN,   false
@@ -44,6 +52,9 @@ dance_lights DANCE_TIMES, DANCE_INTERVAL, ->
         else
           logger.log post:"success"
 
+  alarm = null
+  open = false
+
   gpio.on "change", (pin, value) ->
     if pin is DOOR_PIN
       logger.time at:"door", (logger) ->
@@ -55,6 +66,19 @@ dance_lights DANCE_TIMES, DANCE_INTERVAL, ->
             logger.log post:"error", error:err
           else
             logger.log post:"success"
+        if value is 1
+          alarm = dd.delay DOOR_OPEN_ALARM * 1000, ->
+            flash_light RED_LED_PIN, 5, 300, ->
+              gpio.set RED_LED_PIN, open
+            request.post "#{process.env.HOST}/fridge/#{process.env.ID}/alarm", form:{seconds:DOOR_OPEN_ALARM}, (err, res) ->
+              if err
+                logger.log alarm:"error", error:err
+              else
+                logger.log alarm:"success"
+        else
+          if alarm
+            clearTimeout alarm
+            alarm = null
 
   sensor = new bmp085()
 
