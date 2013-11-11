@@ -53,6 +53,8 @@ dance_lights DANCE_TIMES, DANCE_INTERVAL, ->
           logger.log post:"success"
 
   alarm = null
+  alarm_flasher = null
+  alarm_on = false
   open = false
 
   gpio.on "change", (pin, value) ->
@@ -68,8 +70,9 @@ dance_lights DANCE_TIMES, DANCE_INTERVAL, ->
             logger.log post:"success"
         if value is 1
           alarm = dd.delay DOOR_OPEN_ALARM * 1000, ->
-            flash_light RED_LED_PIN, 5, 300, ->
-              gpio.set RED_LED_PIN, open
+            alarm_flasher = dd.every 300, ->
+              alarm_on = !alarm_on
+              gpio.set RED_LED_PIN, alarm_on
             request.post "#{process.env.HOST}/fridge/#{process.env.ID}/alarm", form:{seconds:DOOR_OPEN_ALARM}, (err, res) ->
               if err
                 logger.log alarm:"error", error:err
@@ -79,6 +82,10 @@ dance_lights DANCE_TIMES, DANCE_INTERVAL, ->
           if alarm
             clearTimeout alarm
             alarm = null
+          if alarm_flasher
+            clearInterval alarm_flasher
+            alarm_flasher = null
+            gpio.set RED_LED_PIN, false
 
   sensor = new bmp085()
 
