@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Unit</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Units</value>
+    </caseValues>
+    <fields>
+        <label><!-- Door Alarm --></label>
+        <name>Door_Alarm__c</name>
+    </fields>
+    <fields>
+        <label><!-- Door Open --></label>
+        <name>Door_Open__c</name>
+    </fields>
+    <fields>
+        <label><!-- Firmware --></label>
+        <name>Firmware__c</name>
+        <relationshipLabel><!-- Units --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Air Pressure --></label>
+        <name>Pressure__c</name>
+    </fields>
+    <fields>
+        <label><!-- Release --></label>
+        <name>Release__c</name>
+        <relationshipLabel><!-- Units --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Temperature --></label>
+        <name>Temperature__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
