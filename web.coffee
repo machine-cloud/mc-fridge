@@ -21,6 +21,22 @@ unit_update = (name, updates={}, cb) ->
           logger.log updates
           cb err, res
 
+decrement_stock = (name, uid, cb) ->
+  logger.time at:"decrement_stock", (logger) ->
+    force (err, force) ->
+      force.sobject("Unit__c").find(Name:name, "Id").limit(1).execute (err, records) ->
+        unit = records[0]
+        force.sobject("Inventory__c").find(Name:uid, "Id").limit(1).execute (err, records) ->
+          inventory = records[0]
+          force.sobject("Stock__c").find(Unit__c:unit.Id, Inventory__c:inventory.Id, "Id, Quantity__c").limit(1).execute (err, records) ->
+            stock = records[0]
+            if stock.Quantity__c > 0
+              stock.Quantity__c -= 1
+              force.sobject("Stock__c").update stock, (err, res) ->
+                console.log "err", err
+                console.log "res", res
+                cb err
+
 app = stdweb("fridge.web")
 
 app.get "/", (req, res) ->
@@ -48,8 +64,10 @@ app.post "/fridge/:id/report", (req, res) ->
 
 app.post "/fridge/:id/scan", (req, res) ->
   logger.time at:"scan", (logger) ->
-    res.send req.body
-    logger.log req.body
+    decrement_stock req.params.id, req.body.uid, (err) ->
+      console.log "err", err
+      res.send req.body
+      logger.log req.body
 
 app.start (port) ->
   console.log "listening on #{port}"
