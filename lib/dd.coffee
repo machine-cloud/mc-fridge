@@ -17,6 +17,8 @@ module.exports =
 
   merge: coffee.helpers.merge
 
+  now: -> (new Date()).getTime()
+
   reduce: (obj, start, cb) -> obj.reduce(cb, start)
 
   starts_with: (str, needle) -> str.indexOf(needle) is 0

@@ -2,7 +2,9 @@ async      = require("async")
 coffee     = require("coffee-script")
 dd         = require("./lib/dd")
 express    = require("express")
+faye       = require("./lib/faye-redis-url")
 logger     = require("logfmt").namespace(ns:"fridge.web")
+redis      = require("redis-url").connect(process.env.REDIS_URL)
 salesforce = require("node-salesforce")
 stdweb     = require("./lib/stdweb")
 
@@ -15,6 +17,7 @@ unit_update = (name, updates={}, cb) ->
   logger.time at:"unit_update", (logger) ->
     force (err, force) ->
       force.sobject("Unit__c").find(Name:name, "Id").limit(1).execute (err, records) ->
+        cb "no such fridge" unless records[0]
         updates["Id"] = records[0]["Id"]
         force.sobject("Unit__c").update updates, (err, res) ->
           console.log "err", err
@@ -39,8 +42,26 @@ decrement_stock = (name, uid, cb) ->
 
 app = stdweb("fridge.web")
 
+app.use express.static("#{__dirname}/public")
+
+socket = faye.init(process.env.REDIS_URL)
+socket.attach app.server
+
 app.get "/", (req, res) ->
   res.send "ok"
+
+app.get "/fridge/:id/chart", (req, res) ->
+  res.render "chart.jade", fridge:req.params.id
+
+app.get "/fridge/:id/chart.json", (req, res) ->
+  redis.zrange "data:#{req.params.id}", 0, -1, (err, data) ->
+    async.map data, (point, cb) ->
+      cb null, JSON.parse(point)
+    ,(err, points) ->
+      console.log "err", err
+      console.log "points", points
+      res.contentType "application/json"
+      res.send points
 
 app.post "/fridge/:id/alarm", (req, res) ->
   logger.time at:"alarm", (logger) ->
@@ -61,6 +82,13 @@ app.post "/fridge/:id/report", (req, res) ->
     unit_update req.params.id, Pressure__c:req.body.pressure, Temperature__c:req.body.temperature, (err) ->
       res.send req.body
       logger.log req.body
+      now = dd.now()
+      redis.multi()
+        .zadd("devices", now, req.params.id)
+        .zadd("data:#{req.params.id}", now, JSON.stringify(dd.merge(now:now, req.body)))
+        .exec (err) ->
+          logger.error err if err
+      socket.getClient().publish "/fridge/#{req.params.id}/point", dd.merge(now:now, req.body)
 
 app.post "/fridge/:id/scan", (req, res) ->
   logger.time at:"scan", (logger) ->
@@ -71,3 +99,14 @@ app.post "/fridge/:id/scan", (req, res) ->
 
 app.start (port) ->
   console.log "listening on #{port}"
+
+dd.every 5000, ->
+  redis.zremrangebyscore "devices", 0, dd.now() - 5000, (err) ->
+    logger.error(err) if err
+
+dd.every 3000, ->
+  redis.keys "data:*", (err, devices) ->
+    async.each devices, (device, cb) ->
+      redis.zremrangebyscore device, 0, dd.now() - 60000, cb
+    ,(err) ->
+      log.error err if err

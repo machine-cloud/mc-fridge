@@ -1,0 +1,9 @@
+extends layout
+
+block script
+
+  script(src="/js/chart.js")
+
+block content
+
+  canvas#chart(width=400, height=100, data-fridge=fridge)

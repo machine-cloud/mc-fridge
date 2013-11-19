@@ -8,9 +8,13 @@
     "async":           "~0.2.9",
     "express":         "~3.4.4",
     "coffee-script":   "~1.6.3",
+    "faye":            "~1.0.0",
+    "faye-redis":      "~0.2.0",
+    "jade":            "~0.35.0",
     "logfmt":          "~0.16.0",
     "nodemon":         "~0.7.10",
     "node-salesforce": "~0.6.3",
-    "node-uuid":       "~1.4.1"
+    "node-uuid":       "~1.4.1",
+    "redis-url":       "~0.2.0"
   }
 }

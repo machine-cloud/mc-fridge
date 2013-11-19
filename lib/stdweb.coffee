@@ -1,5 +1,6 @@
 coffee  = require("coffee-script")
 express = require("express")
+http    = require("http")
 logfmt  = require("logfmt")
 
 module.exports = (name) ->
@@ -11,11 +12,13 @@ module.exports = (name) ->
   app.use express.cookieParser()
   app.use express.bodyParser()
 
+  app.server = http.createServer(app)
+
   app.start = (port, cb) ->
     if port instanceof Function
       cb = port
       port = process.env.PORT
-    @listen port, ->
+    @server.listen port, ->
       cb port
 
   app
