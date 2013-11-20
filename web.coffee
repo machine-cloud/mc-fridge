@@ -100,10 +100,6 @@ app.post "/fridge/:id/scan", (req, res) ->
 app.start (port) ->
   console.log "listening on #{port}"
 
-dd.every 5000, ->
-  redis.zremrangebyscore "devices", 0, dd.now() - 5000, (err) ->
-    logger.error(err) if err
-
 dd.every 3000, ->
   redis.keys "data:*", (err, devices) ->
     async.each devices, (device, cb) ->
