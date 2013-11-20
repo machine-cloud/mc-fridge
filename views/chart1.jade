@@ -1,0 +1,13 @@
+extends layout
+
+block script
+
+  script(src="/js/chart.js")
+
+block content
+
+  #chart1
+    h4#temp Temperature (&deg;C)
+    canvas#tempchart(width=272, height=60, data-fridge=fridge)
+    h4#pressure Air Pressure (mmHg)
+    canvas#pressurechart(width=272, height=60, data-fridge=fridge)
