@@ -1,13 +1,27 @@
 h4 {
-  display: inline-block;
-  width: 410px;
+  width: 420px;
   padding: 0;
   margin: 0;
   margin-bottom: 4px;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0.8em;
+  float: left;
 }
 
 #tempchart {
-  margin-right: 10px;
+  margin-right: 20px;
+  clear: left;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+ 
+.clearfix {
+  display: inline-block;
 }
