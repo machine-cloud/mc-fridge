@@ -39,6 +39,13 @@ dance_lights DANCE_TIMES, DANCE_INTERVAL, ->
   gpio.set RED_LED_PIN,   false
   gpio.set GREEN_LED_PIN, false
 
+  request.get "#{process.env.HOST}/service/mqtt", (err, res) ->
+    mqtt = require("./lib/mqtt-url").connect(res.body)
+    mqtt.on "connect", ->
+      mqtt.subscribe "/bus/#{process.env.ID}"
+    mqtt.on "message", (data) ->
+      console.log "message", data
+
   pn532.on "uid", (uid) ->
     uid = uid.toString("hex")
     logger.time at:"scan", (logger) ->
