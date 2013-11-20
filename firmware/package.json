@@ -10,6 +10,7 @@
     "coffee-script": "~1.6.3",
     "i2c":           "~0.1.4",
     "logfmt":        "~0.16.0",
+    "mqtt":          "~0.3.3",
     "pi-gpio":       "~0.0.2",
     "request":       "~2.27.0",
     "serialport":    "~1.2.3"
