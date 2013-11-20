@@ -83,7 +83,7 @@ app.post "/fridge/:id/door", (req, res) ->
 
 app.get "/fridge/:id/update", (req, res) ->
   logger.time at:"update", (logger) ->
-    mqtt.publish "/bus/#{req.params.id}", command:"update"
+    mqtt.publish "/bus/#{req.params.id}", JSON.stringify(command:"update")
     res.send "ok"
 
 app.post "/fridge/:id/report", (req, res) ->
