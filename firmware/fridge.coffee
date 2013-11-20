@@ -50,8 +50,8 @@ dance_lights DANCE_TIMES, DANCE_INTERVAL, ->
         when "update"
           console.log "updating!"
           git = spawn "git", ["pull"], cwd:"/home/pi/mc-fridge"
-          git.stdout.on "data", (data) -> console.log "stdout", data
-          git.stderr.on "data", (data) -> console.log "stderr", data
+          git.stdout.on "data", (data) -> console.log "stdout", data.toString()
+          git.stderr.on "data", (data) -> console.log "stderr", data.toString()
           git.on "close", -> process.exit()
 
   pn532.on "uid", (uid) ->
