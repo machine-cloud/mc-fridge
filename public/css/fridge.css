@@ -1,0 +1,12 @@
+h4 {
+  display: inline-block;
+  width: 410px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 4px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#tempchart {
+  margin-right: 10px;
+}
