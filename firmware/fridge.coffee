@@ -44,7 +44,10 @@ dance_lights DANCE_TIMES, DANCE_INTERVAL, ->
     mqtt.on "connect", ->
       mqtt.subscribe "/bus/#{process.env.ID}"
     mqtt.on "message", (channel, data) ->
-      console.log "message", channel, data
+      message = JSON.parse(data)
+      switch data.command
+        when "update"
+          console.log "updating!"
 
   pn532.on "uid", (uid) ->
     uid = uid.toString("hex")
