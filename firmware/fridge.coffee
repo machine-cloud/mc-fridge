@@ -46,8 +46,7 @@ dance_lights DANCE_TIMES, DANCE_INTERVAL, ->
       mqtt.subscribe "/bus/#{process.env.ID}"
     mqtt.on "message", (channel, data) ->
       message = JSON.parse(data)
-      console.log "data", data
-      switch data.command
+      switch message.command
         when "update"
           console.log "updating!"
           git = spawn "git", ["pull"], cwd:"/home/pi/mc-fridge"
