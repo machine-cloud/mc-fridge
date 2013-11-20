@@ -4,6 +4,7 @@ dd         = require("./lib/dd")
 express    = require("express")
 faye       = require("./lib/faye-redis-url")
 logger     = require("logfmt").namespace(ns:"fridge.web")
+mqtt       = require("./lib/mqtt-url").connect(process.env.MQTT_URL)
 redis      = require("redis-url").connect(process.env.REDIS_URL)
 salesforce = require("node-salesforce")
 stdweb     = require("./lib/stdweb")
@@ -79,6 +80,11 @@ app.post "/fridge/:id/door", (req, res) ->
     unit_update req.params.id, updates, (err) ->
       res.send req.body
       logger.log req.body
+
+app.get "/fridge/:id/update", (req, res) ->
+  logger.time at:"update", (logger) ->
+    mqtt.publish "/bus/#{req.params.id}", JSON.stringify(command:"update")
+    res.send "ok"
 
 app.post "/fridge/:id/report", (req, res) ->
   logger.time at:"report", (logger) ->

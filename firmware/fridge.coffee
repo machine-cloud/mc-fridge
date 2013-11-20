@@ -5,6 +5,7 @@ gpio    = require("./lib/gpio").init(inputs:7, outputs:[18, 22])
 logger  = require("logfmt").namespace(ns:"fridge.firmware")
 pn532   = require("./lib/pn532").init("/dev/ttyAMA0")
 request = require("request")
+spawn   = require("child_process").spawn
 
 DANCE_INTERVAL  = 200
 DANCE_TIMES     = 5
@@ -38,6 +39,20 @@ flash_light = (pin, times, interval, cb) ->
 dance_lights DANCE_TIMES, DANCE_INTERVAL, ->
   gpio.set RED_LED_PIN,   false
   gpio.set GREEN_LED_PIN, false
+
+  request.get "#{process.env.HOST}/service/mqtt", (err, res) ->
+    mqtt = require("./lib/mqtt-url").connect(res.body)
+    mqtt.on "connect", ->
+      mqtt.subscribe "/bus/#{process.env.ID}"
+    mqtt.on "message", (channel, data) ->
+      message = JSON.parse(data)
+      switch message.command
+        when "update"
+          console.log "updating!"
+          git = spawn "git", ["pull"], cwd:"/home/pi/mc-fridge"
+          git.stdout.on "data", (data) -> console.log "stdout", data.toString()
+          git.stderr.on "data", (data) -> console.log "stderr", data.toString()
+          git.on "close", -> process.exit()
 
   pn532.on "uid", (uid) ->
     uid = uid.toString("hex")
