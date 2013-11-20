@@ -43,8 +43,8 @@ dance_lights DANCE_TIMES, DANCE_INTERVAL, ->
     mqtt = require("./lib/mqtt-url").connect(res.body)
     mqtt.on "connect", ->
       mqtt.subscribe "/bus/#{process.env.ID}"
-    mqtt.on "message", (data) ->
-      console.log "message", data
+    mqtt.on "message", (channel, data) ->
+      console.log "message", channel, data
 
   pn532.on "uid", (uid) ->
     uid = uid.toString("hex")
