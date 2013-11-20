@@ -104,7 +104,10 @@ app.post "/fridge/:id/report", (req, res) ->
         .exec (err) ->
           logger.error err if err
       socket.getClient().publish "/fridge/#{req.params.id}/point", dd.merge(now:now, req.body)
-      tempo.write_bulk dd.now(), req.body
+      data = []
+      data.push key:"fridge:#{req.params.id}.temperature", v:req.body.temperature
+      data.push key:"fridge:#{req.params.id}.pressure", v:req.body.pressure
+      tempo.write_bulk dd.now(), data
 
 app.post "/fridge/:id/scan", (req, res) ->
   logger.time at:"scan", (logger) ->
