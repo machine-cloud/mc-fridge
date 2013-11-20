@@ -51,7 +51,10 @@ app.get "/", (req, res) ->
   res.send "ok"
 
 app.get "/fridge/:id/chart", (req, res) ->
-  res.render "chart.jade", fridge:req.params.id
+  if req.headers["user-agent"].indexOf("SalesforceTouchContainer") > -1
+    res.render "chart1.jade", fridge:req.params.id
+  else
+    res.render "chart.jade", fridge:req.params.id
 
 app.get "/fridge/:id/chart.json", (req, res) ->
   redis.zrange "data:#{req.params.id}", 0, -1, (err, data) ->

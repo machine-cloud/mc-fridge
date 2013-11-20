@@ -25,3 +25,15 @@ h4 {
 .clearfix {
   display: inline-block;
 }
+
+#chart1 h4 {
+  font-size: 0.6em;
+}
+
+#chart1 canvas {
+  display: block;
+}
+
+#chart1 #tempchart {
+  margin-bottom: 12px;
+}
