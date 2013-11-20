@@ -8,11 +8,14 @@ mqtt       = require("./lib/mqtt-url").connect(process.env.MQTT_URL)
 redis      = require("redis-url").connect(process.env.REDIS_URL)
 salesforce = require("node-salesforce")
 stdweb     = require("./lib/stdweb")
+tempodb    = require("tempodb")
 
 force = (cb) ->
   sf = new salesforce.Connection()
   sf.login process.env.CRM_USERNAME, process.env.CRM_PASSWORD, (err, user) ->
     cb err, sf, user
+
+tempo = new tempodb.TempoDBClient(process.env.TEMPODB_API_KEY, process.env.TEMPODB_API_SECRET)
 
 unit_update = (name, updates={}, cb) ->
   logger.time at:"unit_update", (logger) ->
@@ -101,6 +104,7 @@ app.post "/fridge/:id/report", (req, res) ->
         .exec (err) ->
           logger.error err if err
       socket.getClient().publish "/fridge/#{req.params.id}/point", dd.merge(now:now, req.body)
+      tempo.write_bulk dd.now(), req.body
 
 app.post "/fridge/:id/scan", (req, res) ->
   logger.time at:"scan", (logger) ->
