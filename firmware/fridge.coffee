@@ -5,6 +5,7 @@ gpio    = require("./lib/gpio").init(inputs:7, outputs:[18, 22])
 logger  = require("logfmt").namespace(ns:"fridge.firmware")
 pn532   = require("./lib/pn532").init("/dev/ttyAMA0")
 request = require("request")
+spawn   = require("child_process").spawn
 
 DANCE_INTERVAL  = 200
 DANCE_TIMES     = 5
@@ -47,7 +48,10 @@ dance_lights DANCE_TIMES, DANCE_INTERVAL, ->
       message = JSON.parse(data)
       switch data.command
         when "update"
-          console.log "updating!"
+          git = spawn "git", ["pull"], cwd:"/home/pi/mc-fridge"
+          git.stdout.on "data", (data) -> console.log "stdout", data
+          git.stderr.on "data", (data) -> console.log "stderr", data
+          git.on "close", -> process.exit()
 
   pn532.on "uid", (uid) ->
     uid = uid.toString("hex")
