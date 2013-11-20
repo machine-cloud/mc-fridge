@@ -48,6 +48,7 @@ dance_lights DANCE_TIMES, DANCE_INTERVAL, ->
       message = JSON.parse(data)
       switch message.command
         when "update"
+          console.log "updating"
           flash_light GREEN_LED_PIN, 5, 300, ->
             git = spawn "git", ["pull"], cwd:"/home/pi/mc-fridge"
             git.stdout.on "data", (data) -> console.log "stdout", data.toString()
