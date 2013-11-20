@@ -100,6 +100,9 @@ app.post "/fridge/:id/scan", (req, res) ->
       res.send req.body
       logger.log req.body
 
+app.get "/service/mqtt", (req, res) ->
+  res.send process.env.MQTT_URL
+
 app.start (port) ->
   console.log "listening on #{port}"
 
