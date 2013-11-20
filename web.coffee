@@ -53,7 +53,10 @@ app.get "/", (req, res) ->
 
 app.get "/fridge/:id/chart", (req, res) ->
   if req.headers["user-agent"].indexOf("SalesforceTouchContainer") > -1
-    res.render "chart1.jade", fridge:req.params.id
+    if req.headers["user-agent"].indexOf("iPad") > -1
+      res.render "chart1ipad.jade", fridge:req.params.id
+    else
+      res.render "chart1.jade", fridge:req.params.id
   else
     res.render "chart.jade", fridge:req.params.id
 
