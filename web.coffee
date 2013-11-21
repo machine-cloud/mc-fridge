@@ -76,6 +76,9 @@ app.get "/fridge/:id/status", (req, res) ->
     status ?= "closed"
     res.render "status.jade", fridge:req.params.id, status:status
 
+app.get "/fridge/:id/update_firmware", (req, res) ->
+  res.render "update.jade", fridge:req.params.id
+
 app.post "/fridge/:id/alarm", (req, res) ->
   logger.time at:"alarm", (logger) ->
     unit_update req.params.id, Door_Alarm__c:true, (err) ->
