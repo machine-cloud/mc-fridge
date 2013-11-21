@@ -7,7 +7,7 @@ pn532   = require("./lib/pn532").init("/dev/ttyAMA0")
 request = require("request")
 spawn   = require("child_process").spawn
 
-DOOR_OPEN_ALARM = 20
+DOOR_OPEN_ALARM = 5
 
 DANCE_INTERVAL  = 200
 DANCE_TIMES     = 5
