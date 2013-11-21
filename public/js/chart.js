@@ -55,7 +55,7 @@ $(window).ready(function() {
 
   var client = new Faye.Client('/faye');
   client.subscribe('/fridge/' + fridge + '/point', function(data) {
-    temp.append(data.now, data.temperature);
+    temp.append(data.now, data.temperature + Math.random());
     pressure.append(data.now, data.pressure);
   });
 
