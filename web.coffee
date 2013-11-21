@@ -129,6 +129,14 @@ app.post "/fridge/:id/scan", (req, res) ->
       res.send req.body
       logger.log req.body
 
+app.get "/reset", (req, res) ->
+  force (err, force) ->
+    force.query "SELECT Id FROM FeedItem", (err, result) ->
+      async.each result.records, (record, cb) ->
+        force.sobject("FeedItem").destroy record.Id, cb
+      ,(err) ->
+        res.send "ok"
+
 app.get "/service/mqtt", (req, res) ->
   res.send process.env.MQTT_URL
 
