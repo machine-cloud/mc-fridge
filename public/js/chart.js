@@ -3,9 +3,9 @@ $(window).ready(function() {
   var temp = new TimeSeries();
 
   var tempchart = new SmoothieChart({
-    minValue: 800,
-    maxValue: 5,
-    millisPerPixel: 35,
+    millisPerPixel: 150,
+    minValue: 5,
+    maxValue: 35,
     grid: {
       fillStyle: 'transparent',
       millisPerLine: 4000,
