@@ -123,6 +123,7 @@ app.post "/fridge/:id/report", (req, res) ->
 
 app.post "/fridge/:id/scan", (req, res) ->
   logger.time at:"scan", (logger) ->
+    console.log "uid", req.body.uid
     decrement_stock req.params.id, req.body.uid, (err) ->
       console.log "err", err
       res.send req.body
