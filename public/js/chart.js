@@ -17,7 +17,7 @@ $(window).ready(function() {
   });
   tempchart.addTimeSeries(temp, {
     strokeStyle: '#578bff',
-    lineWidth: 4 
+    lineWidth: 2 
   });
   tempchart.streamTo(document.getElementById("tempchart"), 3000);
 
@@ -40,7 +40,7 @@ $(window).ready(function() {
   });
   pressurechart.addTimeSeries(pressure, {
     strokeStyle: '#578bff',
-    lineWidth: 4 
+    lineWidth: 2 
   });
   pressurechart.streamTo(document.getElementById("pressurechart"), 3000);
 
