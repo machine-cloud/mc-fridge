@@ -68,8 +68,6 @@ app.get "/fridge/:id/chart.json", (req, res) ->
     async.map data, (point, cb) ->
       cb null, JSON.parse(point)
     ,(err, points) ->
-      console.log "err", err
-      console.log "points", points
       res.contentType "application/json"
       res.send points
 
