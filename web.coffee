@@ -71,19 +71,30 @@ app.get "/fridge/:id/chart.json", (req, res) ->
       res.contentType "application/json"
       res.send points
 
+app.get "/fridge/:id/status", (req, res) ->
+  redis.get "door:#{req.params.id}", (err, status) ->
+    status ?= "closed"
+    res.render "status.jade", fridge:req.params.id, status:status
+
 app.post "/fridge/:id/alarm", (req, res) ->
   logger.time at:"alarm", (logger) ->
-    unit_update req.params.id, Door_Alarm__c:true, (err, res) ->
-      res.send req.body
+    unit_update req.params.id, Door_Alarm__c:true, (err) ->
+      res.send "ok"
       logger.log req.body
+      socket.getClient().publish "/fridge/#{req.params.id}/door", "alarm"
+      redis.set "door:#{req.params.id}", "alarm"
 
 app.post "/fridge/:id/door", (req, res) ->
   logger.time at:"door", (logger) ->
     updates = Door_Open__c:req.body.open
     updates.Door_Alarm__c = false if req.body.open is "false"
+    console.log "body", req.body
     unit_update req.params.id, updates, (err) ->
       res.send req.body
       logger.log req.body
+      status = if req.body.open is "false" then "closed" else "open"
+      redis.set "door:#{req.params.id}", status
+      socket.getClient().publish "/fridge/#{req.params.id}/door", status
 
 app.get "/fridge/:id/update", (req, res) ->
   logger.time at:"update", (logger) ->

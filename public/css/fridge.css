@@ -37,3 +37,33 @@ h4 {
 #chart1 #tempchart {
   margin-bottom: 20px;
 }
+
+#status h4 {
+  display: block;
+  float: none;
+}
+
+#status #light {
+  width: 200px;
+  color: #fff;
+  border: 1px #999 solid;
+  display: block;
+  padding: 4px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+#light.open {
+  background-color: #0f0;
+  color: #060 !important;
+}
+
+#light.closed {
+  background-color: #060;
+}
+
+#light.alarm {
+  background-color: #f00;
+}
