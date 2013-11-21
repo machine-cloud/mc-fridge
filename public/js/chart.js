@@ -3,7 +3,9 @@ $(window).ready(function() {
   var temp = new TimeSeries();
 
   var tempchart = new SmoothieChart({
-    millisPerPixel:150,
+    minValue: 800,
+    maxValue: 5,
+    millisPerPixel: 35,
     grid: {
       fillStyle: 'transparent',
       millisPerLine: 4000,
@@ -55,7 +57,7 @@ $(window).ready(function() {
 
   var client = new Faye.Client('/faye');
   client.subscribe('/fridge/' + fridge + '/point', function(data) {
-    temp.append(data.now, data.temperature + Math.random());
+    temp.append(data.now, data.temperature);
     pressure.append(data.now, data.pressure);
   });
 
