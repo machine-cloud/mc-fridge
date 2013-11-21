@@ -44,6 +44,21 @@ decrement_stock = (name, uid, cb) ->
                 console.log "res", res
                 cb err
 
+set_stock = (name, uid, num, cb) ->
+  logger.time at:"decrement_stock", (logger) ->
+    force (err, force) ->
+      force.sobject("Unit__c").find(Name:name, "Id").limit(1).execute (err, records) ->
+        unit = records[0]
+        force.sobject("Inventory__c").find(Name:uid, "Id").limit(1).execute (err, records) ->
+          inventory = records[0]
+          force.sobject("Stock__c").find(Unit__c:unit.Id, Inventory__c:inventory.Id, "Id, Quantity__c").limit(1).execute (err, records) ->
+            stock = records[0]
+            stock.Quantity__c = num
+            force.sobject("Stock__c").update stock, (err, res) ->
+              console.log "err", err
+              console.log "res", res
+              cb err
+
 app = stdweb("fridge.web")
 
 app.use express.static("#{__dirname}/public")
@@ -135,6 +150,9 @@ app.get "/reset", (req, res) ->
       async.each result.records, (record, cb) ->
         force.sobject("FeedItem").destroy record.Id, cb
       ,(err) ->
+        unit_update "mc-fridge01", Pressure__c:"", Temperature__c:""
+        set_stock "mc-fridge01", "0bcda7", 1
+        set_stock "mc-fridge01", "4bd3aa", 1
         res.send "ok"
 
 app.get "/service/mqtt", (req, res) ->
