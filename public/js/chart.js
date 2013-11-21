@@ -4,8 +4,6 @@ $(window).ready(function() {
 
   var tempchart = new SmoothieChart({
     millisPerPixel:150,
-    minValue:0,
-    maxValue:35,
     grid: {
       fillStyle: 'transparent',
       millisPerLine: 4000,
