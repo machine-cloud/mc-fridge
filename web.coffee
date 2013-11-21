@@ -76,7 +76,7 @@ app.get "/fridge/:id/chart", (req, res) ->
     else
       res.render "chart1.jade", fridge:req.params.id
   else
-    res.render "chart1.jade", fridge:req.params.id
+    res.render "chart.jade", fridge:req.params.id
 
 app.get "/fridge/:id/chart.json", (req, res) ->
   redis.zrange "data:#{req.params.id}", 0, -1, (err, data) ->
